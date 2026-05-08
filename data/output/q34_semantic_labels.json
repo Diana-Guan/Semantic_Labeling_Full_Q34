@@ -1,0 +1,3815 @@
+{
+  "metadata": {
+    "pipeline_name": "semantic_labeling_q34",
+    "focus": [
+      "ast",
+      "labels"
+    ]
+  },
+  "label_definitions": [
+    {
+      "label_id": "MAT0001",
+      "name": "TRIG_SUBSTITUTION"
+    },
+    {
+      "label_id": "MAT0002",
+      "name": "POWER_OF_A_PRODUCT"
+    },
+    {
+      "label_id": "MAT0003",
+      "name": "TRIG_IDENTITY"
+    },
+    {
+      "label_id": "MAT0004",
+      "name": "FRACTIONAL_EXPONENT_TO_ROOT"
+    },
+    {
+      "label_id": "MAT0005",
+      "name": "RADICAL_REWRITE"
+    },
+    {
+      "label_id": "MAT0006",
+      "name": "CONSTANT_SUBSTITUTION"
+    },
+    {
+      "label_id": "MAT0007",
+      "name": "FACTORING"
+    },
+    {
+      "label_id": "MAT0008",
+      "name": "ROOT_PRODUCT_RULE"
+    },
+    {
+      "label_id": "MAT0009",
+      "name": "SQRT_TO_ABS"
+    },
+    {
+      "label_id": "MAT0010",
+      "name": "TRIG_SQUARE_REWRITE"
+    },
+    {
+      "label_id": "MAT0011",
+      "name": "DIFFERENTIATION"
+    },
+    {
+      "label_id": "MAT0012",
+      "name": "DIFFERENTIAL_REWRITE"
+    },
+    {
+      "label_id": "MAT0013",
+      "name": "INTEGRAND_SUBSTITUTION"
+    },
+    {
+      "label_id": "MAT0014",
+      "name": "CANCEL_COMMON_FACTOR"
+    },
+    {
+      "label_id": "MAT0015",
+      "name": "TRIG_RATIO_REWRITE"
+    },
+    {
+      "label_id": "MAT0016",
+      "name": "INTEGRAL_SPLIT"
+    },
+    {
+      "label_id": "MAT0017",
+      "name": "ANTIDERIVATIVE"
+    },
+    {
+      "label_id": "MAT0018",
+      "name": "BACK_SUBSTITUTION"
+    },
+    {
+      "label_id": "MAT0019",
+      "name": "REFERENCE_TRIANGLE"
+    }
+  ],
+  "labels": [],
+  "equations": [
+    {
+      "equation_id": "S0.Ex1",
+      "step_id": "STEP_1",
+      "original_expression": "integral@((x ^ 2 / (4 - x ^ 2) ^ (3 / 2)) * differential-d@(x))",
+      "labels": [],
+      "ast_tree": [
+        "int",
+        "  multiply",
+        "    divide",
+        "      power",
+        "        identifier(𝑥)",
+        "        number(2)",
+        "      power",
+        "        subtract",
+        "          number(4)",
+        "          power",
+        "            identifier(𝑥)",
+        "            number(2)",
+        "        divide",
+        "          number(3)",
+        "          number(2)",
+        "    differential-d",
+        "      identifier(𝑥)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex2",
+      "step_id": "STEP_2",
+      "original_expression": "x ^ 2 / (4 - x ^ 2) ^ (3 / 2)",
+      "labels": [],
+      "ast_tree": [
+        "divide",
+        "  power",
+        "    identifier(𝑥)",
+        "    number(2)",
+        "  power",
+        "    subtract",
+        "      number(4)",
+        "      power",
+        "        identifier(𝑥)",
+        "        number(2)",
+        "    divide",
+        "      number(3)",
+        "      number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex3",
+      "step_id": "STEP_3",
+      "original_expression": "(4 - x ^ 2) ^ (3 / 2)",
+      "labels": [],
+      "ast_tree": [
+        "power",
+        "  subtract",
+        "    number(4)",
+        "    power",
+        "      identifier(𝑥)",
+        "      number(2)",
+        "  divide",
+        "    number(3)",
+        "    number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex4",
+      "step_id": "STEP_4",
+      "original_expression": "(4 - x ^ 2) ^ (3 / 2)",
+      "labels": [],
+      "ast_tree": [
+        "power",
+        "  subtract",
+        "    number(4)",
+        "    power",
+        "      identifier(𝑥)",
+        "      number(2)",
+        "  divide",
+        "    number(3)",
+        "    number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex5",
+      "step_id": "STEP_5",
+      "original_expression": "formulae@(a ^ (m / n) = nth-root@(n, a ^ m) = (nth-root@(n, a)) ^ m, square-root@(a) = a ^ (1 / 2))",
+      "labels": [],
+      "ast_tree": [
+        "and",
+        "  eq",
+        "    power",
+        "      identifier(𝑎)",
+        "      divide",
+        "        identifier(𝑚)",
+        "        identifier(𝑛)",
+        "    root",
+        "      degree",
+        "        identifier(𝑛)",
+        "      power",
+        "        identifier(𝑎)",
+        "        identifier(𝑚)",
+        "  eq",
+        "    share",
+        "    power",
+        "      root",
+        "        degree",
+        "          identifier(𝑛)",
+        "        identifier(𝑎)",
+        "      identifier(𝑚)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex5",
+      "step_id": "STEP_6",
+      "original_expression": "formulae@(a ^ (m / n) = nth-root@(n, a ^ m) = (nth-root@(n, a)) ^ m, square-root@(a) = a ^ (1 / 2))",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  root",
+        "    identifier(𝑎)",
+        "  power",
+        "    identifier(𝑎)",
+        "    divide",
+        "      number(1)",
+        "      number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex6",
+      "step_id": "STEP_7",
+      "original_expression": "Array[[R * e * w * r * i * t * e * (3 / 2) = (1 / 2) cdot 3, (4 - x ^ 2) ^ (3 / 2) = (4 - x ^ 2) ^ ((1 / 2) cdot 3)], [U * s * e * a ^ (b * c) = a ^ b ^ c, (4 - x ^ 2) ^ ((1 / 2) cdot 3) = (4 - x ^ 2) ^ (1 / 2) ^ 3], [R * e * w * r * i * t * e * (4 - x ^ 2) ^ (1 / 2) * a * s * a * s * q * u * a * r * e * r * o * o * t, (4 - x ^ 2) ^ (1 / 2) ^ 3 = (square-root@(4 - x ^ 2)) ^ 3]]",
+      "labels": [
+        {
+          "label_id": "MAT0006",
+          "name": "CONSTANT_SUBSTITUTION"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  power",
+        "    subtract",
+        "      number(4)",
+        "      power",
+        "        identifier(𝑥)",
+        "        number(2)",
+        "    divide",
+        "      number(3)",
+        "      number(2)",
+        "  power",
+        "    subtract",
+        "      number(4)",
+        "      power",
+        "        identifier(𝑥)",
+        "        number(2)",
+        "    ci",
+        "      divide",
+        "        number(1)",
+        "        number(2)",
+        "      number(3)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex6",
+      "step_id": "STEP_8",
+      "original_expression": "Array[[R * e * w * r * i * t * e * (3 / 2) = (1 / 2) cdot 3, (4 - x ^ 2) ^ (3 / 2) = (4 - x ^ 2) ^ ((1 / 2) cdot 3)], [U * s * e * a ^ (b * c) = a ^ b ^ c, (4 - x ^ 2) ^ ((1 / 2) cdot 3) = (4 - x ^ 2) ^ (1 / 2) ^ 3], [R * e * w * r * i * t * e * (4 - x ^ 2) ^ (1 / 2) * a * s * a * s * q * u * a * r * e * r * o * o * t, (4 - x ^ 2) ^ (1 / 2) ^ 3 = (square-root@(4 - x ^ 2)) ^ 3]]",
+      "labels": [
+        {
+          "label_id": "MAT0006",
+          "name": "CONSTANT_SUBSTITUTION"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  power",
+        "    subtract",
+        "      number(4)",
+        "      power",
+        "        identifier(𝑥)",
+        "        number(2)",
+        "    ci",
+        "      divide",
+        "        number(1)",
+        "        number(2)",
+        "      number(3)",
+        "  power",
+        "    power",
+        "      subtract",
+        "        number(4)",
+        "        power",
+        "          identifier(𝑥)",
+        "          number(2)",
+        "      divide",
+        "        number(1)",
+        "        number(2)",
+        "    number(3)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex6",
+      "step_id": "STEP_9",
+      "original_expression": "Array[[R * e * w * r * i * t * e * (3 / 2) = (1 / 2) cdot 3, (4 - x ^ 2) ^ (3 / 2) = (4 - x ^ 2) ^ ((1 / 2) cdot 3)], [U * s * e * a ^ (b * c) = a ^ b ^ c, (4 - x ^ 2) ^ ((1 / 2) cdot 3) = (4 - x ^ 2) ^ (1 / 2) ^ 3], [R * e * w * r * i * t * e * (4 - x ^ 2) ^ (1 / 2) * a * s * a * s * q * u * a * r * e * r * o * o * t, (4 - x ^ 2) ^ (1 / 2) ^ 3 = (square-root@(4 - x ^ 2)) ^ 3]]",
+      "labels": [
+        {
+          "label_id": "MAT0006",
+          "name": "CONSTANT_SUBSTITUTION"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  power",
+        "    power",
+        "      subtract",
+        "        number(4)",
+        "        power",
+        "          identifier(𝑥)",
+        "          number(2)",
+        "      divide",
+        "        number(1)",
+        "        number(2)",
+        "    number(3)",
+        "  power",
+        "    root",
+        "      subtract",
+        "        number(4)",
+        "        power",
+        "          identifier(𝑥)",
+        "          number(2)",
+        "    number(3)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex7",
+      "step_id": "STEP_10",
+      "original_expression": "square-root@(4 - x ^ 2)",
+      "labels": [],
+      "ast_tree": [
+        "root",
+        "  subtract",
+        "    number(4)",
+        "    power",
+        "      identifier(𝑥)",
+        "      number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex8",
+      "step_id": "STEP_11",
+      "original_expression": "square-root@(a ^ 2 - x ^ 2)",
+      "labels": [],
+      "ast_tree": [
+        "root",
+        "  subtract",
+        "    power",
+        "      identifier(𝑎)",
+        "      number(2)",
+        "    power",
+        "      identifier(𝑥)",
+        "      number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex9",
+      "step_id": "STEP_12",
+      "original_expression": "square-root@(a ^ 2 - x ^ 2)",
+      "labels": [],
+      "ast_tree": [
+        "root",
+        "  subtract",
+        "    power",
+        "      identifier(𝑎)",
+        "      number(2)",
+        "    power",
+        "      identifier(𝑥)",
+        "      number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex10",
+      "step_id": "STEP_13",
+      "original_expression": "x = a * sine@(theta)",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  identifier(𝑥)",
+        "  multiply",
+        "    identifier(𝑎)",
+        "    sin",
+        "      identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex11X",
+      "step_id": "STEP_14",
+      "original_expression": "formulae@(S * u * b * s * t * i * t * u * t * e * x = a * sine@(theta), square-root@(a ^ 2 - x ^ 2) = square-root@(a ^ 2 - (a * sine@(theta)) ^ 2))",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  multiply",
+        "    identifier(𝑆)",
+        "    identifier(𝑢)",
+        "    identifier(𝑏)",
+        "    identifier(𝑠)",
+        "    identifier(𝑡)",
+        "    identifier(𝑖)",
+        "    identifier(𝑡)",
+        "    identifier(𝑢)",
+        "    identifier(𝑡)",
+        "    identifier(𝑒)",
+        "    identifier(𝑥)",
+        "  multiply",
+        "    identifier(𝑎)",
+        "    sin",
+        "      identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex11X",
+      "step_id": "STEP_15",
+      "original_expression": "formulae@(S * u * b * s * t * i * t * u * t * e * x = a * sine@(theta), square-root@(a ^ 2 - x ^ 2) = square-root@(a ^ 2 - (a * sine@(theta)) ^ 2))",
+      "labels": [
+        {
+          "label_id": "MAT0005",
+          "name": "RADICAL_REWRITE"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  root",
+        "    subtract",
+        "      power",
+        "        identifier(𝑎)",
+        "        number(2)",
+        "      power",
+        "        identifier(𝑥)",
+        "        number(2)",
+        "  root",
+        "    subtract",
+        "      power",
+        "        identifier(𝑎)",
+        "        number(2)",
+        "      power",
+        "        multiply",
+        "          identifier(𝑎)",
+        "          sin",
+        "            identifier(𝜃)",
+        "        number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex12",
+      "step_id": "STEP_16",
+      "original_expression": "Array[[U * s * e * P * o * w * e * r * o * f * a * P * r * o * d * u * c * t * R * u * l * e, (a * b) ^ 2 = a ^ 2 * b ^ 2], [S * u * b * s * t * i * t * u * t * e * b = sine@(theta), (a * sine@(theta)) ^ 2 = a ^ 2 * (sine@(theta)) ^ 2], [, square-root@(a ^ 2 - (a * sine@(theta)) ^ 2) = square-root@(a ^ 2 - a ^ 2 * (sine@(theta)) ^ 2)]]",
+      "labels": [
+        {
+          "label_id": "MAT0002",
+          "name": "POWER_OF_A_PRODUCT"
+        },
+        {
+          "label_id": "MAT0006",
+          "name": "CONSTANT_SUBSTITUTION"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  power",
+        "    multiply",
+        "      identifier(𝑎)",
+        "      identifier(𝑏)",
+        "    number(2)",
+        "  multiply",
+        "    power",
+        "      identifier(𝑎)",
+        "      number(2)",
+        "    power",
+        "      identifier(𝑏)",
+        "      number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex12",
+      "step_id": "STEP_17",
+      "original_expression": "Array[[U * s * e * P * o * w * e * r * o * f * a * P * r * o * d * u * c * t * R * u * l * e, (a * b) ^ 2 = a ^ 2 * b ^ 2], [S * u * b * s * t * i * t * u * t * e * b = sine@(theta), (a * sine@(theta)) ^ 2 = a ^ 2 * (sine@(theta)) ^ 2], [, square-root@(a ^ 2 - (a * sine@(theta)) ^ 2) = square-root@(a ^ 2 - a ^ 2 * (sine@(theta)) ^ 2)]]",
+      "labels": [
+        {
+          "label_id": "MAT0002",
+          "name": "POWER_OF_A_PRODUCT"
+        },
+        {
+          "label_id": "MAT0006",
+          "name": "CONSTANT_SUBSTITUTION"
+        },
+        {
+          "label_id": "MAT0010",
+          "name": "TRIG_SQUARE_REWRITE"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  power",
+        "    multiply",
+        "      identifier(𝑎)",
+        "      sin",
+        "        identifier(𝜃)",
+        "    number(2)",
+        "  multiply",
+        "    power",
+        "      identifier(𝑎)",
+        "      number(2)",
+        "    power",
+        "      sin",
+        "        identifier(𝜃)",
+        "      number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex12",
+      "step_id": "STEP_18",
+      "original_expression": "Array[[U * s * e * P * o * w * e * r * o * f * a * P * r * o * d * u * c * t * R * u * l * e, (a * b) ^ 2 = a ^ 2 * b ^ 2], [S * u * b * s * t * i * t * u * t * e * b = sine@(theta), (a * sine@(theta)) ^ 2 = a ^ 2 * (sine@(theta)) ^ 2], [, square-root@(a ^ 2 - (a * sine@(theta)) ^ 2) = square-root@(a ^ 2 - a ^ 2 * (sine@(theta)) ^ 2)]]",
+      "labels": [
+        {
+          "label_id": "MAT0005",
+          "name": "RADICAL_REWRITE"
+        },
+        {
+          "label_id": "MAT0010",
+          "name": "TRIG_SQUARE_REWRITE"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  root",
+        "    subtract",
+        "      power",
+        "        identifier(𝑎)",
+        "        number(2)",
+        "      power",
+        "        multiply",
+        "          identifier(𝑎)",
+        "          sin",
+        "            identifier(𝜃)",
+        "        number(2)",
+        "  root",
+        "    subtract",
+        "      power",
+        "        identifier(𝑎)",
+        "        number(2)",
+        "      multiply",
+        "        power",
+        "          identifier(𝑎)",
+        "          number(2)",
+        "        power",
+        "          sin",
+        "            identifier(𝜃)",
+        "          number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex13X",
+      "step_id": "STEP_19",
+      "original_expression": "list@(F * o * r * p * a * t * t * e * r * n * square-root@(a ^ 2 - x ^ 2), l * e * t * x) = a * sine@(theta)",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  list",
+        "    multiply",
+        "      identifier(𝐹)",
+        "      identifier(𝑜)",
+        "      identifier(𝑟)",
+        "      identifier(𝑝)",
+        "      identifier(𝑎)",
+        "      identifier(𝑡)",
+        "      identifier(𝑡)",
+        "      identifier(𝑒)",
+        "      identifier(𝑟)",
+        "      identifier(𝑛)",
+        "      root",
+        "        subtract",
+        "          power",
+        "            identifier(𝑎)",
+        "            number(2)",
+        "          power",
+        "            identifier(𝑥)",
+        "            number(2)",
+        "    multiply",
+        "      identifier(𝑙)",
+        "      identifier(𝑒)",
+        "      identifier(𝑡)",
+        "      identifier(𝑥)",
+        "  multiply",
+        "    identifier(𝑎)",
+        "    sin",
+        "      identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex13Xa",
+      "step_id": "STEP_20",
+      "original_expression": "square-root@(a ^ 2 - x ^ 2) = square-root@(a ^ 2 - a ^ 2 * (sine@(theta)) ^ 2)",
+      "labels": [
+        {
+          "label_id": "MAT0005",
+          "name": "RADICAL_REWRITE"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  root",
+        "    subtract",
+        "      power",
+        "        identifier(𝑎)",
+        "        number(2)",
+        "      power",
+        "        identifier(𝑥)",
+        "        number(2)",
+        "  root",
+        "    subtract",
+        "      power",
+        "        identifier(𝑎)",
+        "        number(2)",
+        "      multiply",
+        "        power",
+        "          identifier(𝑎)",
+        "          number(2)",
+        "        power",
+        "          sin",
+        "            identifier(𝜃)",
+        "          number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex14",
+      "step_id": "STEP_21",
+      "original_expression": "Array[[R * e * w * r * i * t * e * 4 = 2 cdot 2 = absent, 2 ^ 2, square-root@(4 - x ^ 2), =, square-root@(2 ^ 2 - x ^ 2)], [, L * e * t, square-root@(2 ^ 2 - x ^ 2), =, square-root@(a ^ 2 - x ^ 2)], [, , a, =, 2], [, , x, =, a * sine@(theta) = 2 * sine@(theta)]]",
+      "labels": [
+        {
+          "label_id": "MAT0005",
+          "name": "RADICAL_REWRITE"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  root",
+        "    subtract",
+        "      number(4)",
+        "      power",
+        "        identifier(𝑥)",
+        "        number(2)",
+        "  root",
+        "    subtract",
+        "      power",
+        "        number(2)",
+        "        number(2)",
+        "      power",
+        "        identifier(𝑥)",
+        "        number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex14",
+      "step_id": "STEP_22",
+      "original_expression": "Array[[R * e * w * r * i * t * e * 4 = 2 cdot 2 = absent, 2 ^ 2, square-root@(4 - x ^ 2), =, square-root@(2 ^ 2 - x ^ 2)], [, L * e * t, square-root@(2 ^ 2 - x ^ 2), =, square-root@(a ^ 2 - x ^ 2)], [, , a, =, 2], [, , x, =, a * sine@(theta) = 2 * sine@(theta)]]",
+      "labels": [
+        {
+          "label_id": "MAT0005",
+          "name": "RADICAL_REWRITE"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  root",
+        "    subtract",
+        "      power",
+        "        number(2)",
+        "        number(2)",
+        "      power",
+        "        identifier(𝑥)",
+        "        number(2)",
+        "  root",
+        "    subtract",
+        "      power",
+        "        identifier(𝑎)",
+        "        number(2)",
+        "      power",
+        "        identifier(𝑥)",
+        "        number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex14",
+      "step_id": "STEP_23",
+      "original_expression": "Array[[R * e * w * r * i * t * e * 4 = 2 cdot 2 = absent, 2 ^ 2, square-root@(4 - x ^ 2), =, square-root@(2 ^ 2 - x ^ 2)], [, L * e * t, square-root@(2 ^ 2 - x ^ 2), =, square-root@(a ^ 2 - x ^ 2)], [, , a, =, 2], [, , x, =, a * sine@(theta) = 2 * sine@(theta)]]",
+      "labels": [
+        {
+          "label_id": "MAT0006",
+          "name": "CONSTANT_SUBSTITUTION"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  identifier(𝑎)",
+        "  number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex14",
+      "step_id": "STEP_24",
+      "original_expression": "Array[[R * e * w * r * i * t * e * 4 = 2 cdot 2 = absent, 2 ^ 2, square-root@(4 - x ^ 2), =, square-root@(2 ^ 2 - x ^ 2)], [, L * e * t, square-root@(2 ^ 2 - x ^ 2), =, square-root@(a ^ 2 - x ^ 2)], [, , a, =, 2], [, , x, =, a * sine@(theta) = 2 * sine@(theta)]]",
+      "labels": [
+        {
+          "label_id": "MAT0006",
+          "name": "CONSTANT_SUBSTITUTION"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  identifier(𝑥)",
+        "  eq",
+        "    multiply",
+        "      identifier(𝑎)",
+        "      sin",
+        "        identifier(𝜃)",
+        "    multiply",
+        "      number(2)",
+        "      sin",
+        "        identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex15X",
+      "step_id": "STEP_25",
+      "original_expression": "square-root@(a ^ 2 - x ^ 2) = square-root@(a ^ 2 - a ^ 2 * (sine@(theta)) ^ 2)",
+      "labels": [
+        {
+          "label_id": "MAT0005",
+          "name": "RADICAL_REWRITE"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  root",
+        "    subtract",
+        "      power",
+        "        identifier(𝑎)",
+        "        number(2)",
+        "      power",
+        "        identifier(𝑥)",
+        "        number(2)",
+        "  root",
+        "    subtract",
+        "      power",
+        "        identifier(𝑎)",
+        "        number(2)",
+        "      multiply",
+        "        power",
+        "          identifier(𝑎)",
+        "          number(2)",
+        "        power",
+        "          sin",
+        "            identifier(𝜃)",
+        "          number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex15Xa",
+      "step_id": "STEP_26",
+      "original_expression": "square-root@(2 ^ 2 - x ^ 2) = square-root@(2 ^ 2 - 2 ^ 2 * (sine@(theta)) ^ 2)",
+      "labels": [
+        {
+          "label_id": "MAT0005",
+          "name": "RADICAL_REWRITE"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  root",
+        "    subtract",
+        "      power",
+        "        number(2)",
+        "        number(2)",
+        "      power",
+        "        identifier(𝑥)",
+        "        number(2)",
+        "  root",
+        "    subtract",
+        "      power",
+        "        number(2)",
+        "        number(2)",
+        "      multiply",
+        "        power",
+        "          number(2)",
+        "          number(2)",
+        "        power",
+        "          sin",
+        "            identifier(𝜃)",
+        "          number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex16",
+      "step_id": "STEP_27",
+      "original_expression": "Array[[R * e * p * l * a * c * e * 2 ^ 2 = 4, square-root@(2 ^ 2 - 2 ^ 2 * (sine@(theta)) ^ 2) = square-root@(4 - 4 * (sine@(theta)) ^ 2)]]",
+      "labels": [
+        {
+          "label_id": "MAT0005",
+          "name": "RADICAL_REWRITE"
+        },
+        {
+          "label_id": "MAT0010",
+          "name": "TRIG_SQUARE_REWRITE"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  root",
+        "    subtract",
+        "      power",
+        "        number(2)",
+        "        number(2)",
+        "      multiply",
+        "        power",
+        "          number(2)",
+        "          number(2)",
+        "        power",
+        "          sin",
+        "            identifier(𝜃)",
+        "          number(2)",
+        "  root",
+        "    subtract",
+        "      number(4)",
+        "      multiply",
+        "        number(4)",
+        "        power",
+        "          sin",
+        "            identifier(𝜃)",
+        "          number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex17",
+      "step_id": "STEP_28",
+      "original_expression": "Array[[R * e * w * r * i * t * e * 4 = 4 cdot 1, 4 - 4 * (sine@(theta)) ^ 2 = 4 * 1 - 4 * (sine@(theta)) ^ 2], [F * a * c * t * o * r * o * u * t * 4, 4 - 4 * (sine@(theta)) ^ 2 = 4 * (1 - (sine@(theta)) ^ 2)]]",
+      "labels": [
+        {
+          "label_id": "MAT0010",
+          "name": "TRIG_SQUARE_REWRITE"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  subtract",
+        "    number(4)",
+        "    multiply",
+        "      number(4)",
+        "      power",
+        "        sin",
+        "          identifier(𝜃)",
+        "        number(2)",
+        "  subtract",
+        "    multiply",
+        "      number(4)",
+        "      number(1)",
+        "    multiply",
+        "      number(4)",
+        "      power",
+        "        sin",
+        "          identifier(𝜃)",
+        "        number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex17",
+      "step_id": "STEP_29",
+      "original_expression": "Array[[R * e * w * r * i * t * e * 4 = 4 cdot 1, 4 - 4 * (sine@(theta)) ^ 2 = 4 * 1 - 4 * (sine@(theta)) ^ 2], [F * a * c * t * o * r * o * u * t * 4, 4 - 4 * (sine@(theta)) ^ 2 = 4 * (1 - (sine@(theta)) ^ 2)]]",
+      "labels": [
+        {
+          "label_id": "MAT0010",
+          "name": "TRIG_SQUARE_REWRITE"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  subtract",
+        "    number(4)",
+        "    multiply",
+        "      number(4)",
+        "      power",
+        "        sin",
+        "          identifier(𝜃)",
+        "        number(2)",
+        "  multiply",
+        "    number(4)",
+        "    subtract",
+        "      number(1)",
+        "      power",
+        "        sin",
+        "          identifier(𝜃)",
+        "        number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex18",
+      "step_id": "STEP_30",
+      "original_expression": "Array[[B * y * (sine@(theta)) ^ 2 = (sine ^ 2)@(theta), 4 * (1 - (sine@(theta)) ^ 2), =, 4 * (1 - (sine ^ 2)@(theta))], [B * y * P * y * t * h * a * g * o * r * e * a * n * i * d * e * n * t * i * t * y, 1 - (sine ^ 2)@(theta), =, (cosine ^ 2)@(theta)], [S * u * b * s * t * i * t * u * t * e * t * h * e * P * y * t * h * a * g * o * r * e * a * n * i * d * e * n * t * i * t * y, 4 * (1 - (sine ^ 2)@(theta)), =, 4 * (cosine ^ 2)@(theta)]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  multiply",
+        "    number(4)",
+        "    subtract",
+        "      number(1)",
+        "      power",
+        "        sin",
+        "          identifier(𝜃)",
+        "        number(2)",
+        "  multiply",
+        "    number(4)",
+        "    subtract",
+        "      number(1)",
+        "      apply",
+        "        identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex18",
+      "step_id": "STEP_31",
+      "original_expression": "Array[[B * y * (sine@(theta)) ^ 2 = (sine ^ 2)@(theta), 4 * (1 - (sine@(theta)) ^ 2), =, 4 * (1 - (sine ^ 2)@(theta))], [B * y * P * y * t * h * a * g * o * r * e * a * n * i * d * e * n * t * i * t * y, 1 - (sine ^ 2)@(theta), =, (cosine ^ 2)@(theta)], [S * u * b * s * t * i * t * u * t * e * t * h * e * P * y * t * h * a * g * o * r * e * a * n * i * d * e * n * t * i * t * y, 4 * (1 - (sine ^ 2)@(theta)), =, 4 * (cosine ^ 2)@(theta)]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  subtract",
+        "    number(1)",
+        "    apply",
+        "      identifier(𝜃)",
+        "  apply",
+        "    identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex18",
+      "step_id": "STEP_32",
+      "original_expression": "Array[[B * y * (sine@(theta)) ^ 2 = (sine ^ 2)@(theta), 4 * (1 - (sine@(theta)) ^ 2), =, 4 * (1 - (sine ^ 2)@(theta))], [B * y * P * y * t * h * a * g * o * r * e * a * n * i * d * e * n * t * i * t * y, 1 - (sine ^ 2)@(theta), =, (cosine ^ 2)@(theta)], [S * u * b * s * t * i * t * u * t * e * t * h * e * P * y * t * h * a * g * o * r * e * a * n * i * d * e * n * t * i * t * y, 4 * (1 - (sine ^ 2)@(theta)), =, 4 * (cosine ^ 2)@(theta)]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  multiply",
+        "    number(4)",
+        "    subtract",
+        "      number(1)",
+        "      apply",
+        "        identifier(𝜃)",
+        "  multiply",
+        "    number(4)",
+        "    apply",
+        "      identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex19X",
+      "step_id": "STEP_33",
+      "original_expression": "square-root@(4 - x ^ 2) = list@(square-root@(2 ^ 2 - x ^ 2), f * r * o * m * S * t * e * p * 3.1)",
+      "labels": [
+        {
+          "label_id": "MAT0005",
+          "name": "RADICAL_REWRITE"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  root",
+        "    subtract",
+        "      number(4)",
+        "      power",
+        "        identifier(𝑥)",
+        "        number(2)",
+        "  list",
+        "    root",
+        "      subtract",
+        "        power",
+        "          number(2)",
+        "          number(2)",
+        "        power",
+        "          identifier(𝑥)",
+        "          number(2)",
+        "    multiply",
+        "      identifier(𝑓)",
+        "      identifier(𝑟)",
+        "      identifier(𝑜)",
+        "      identifier(𝑚)",
+        "      identifier(𝑆)",
+        "      identifier(𝑡)",
+        "      identifier(𝑒)",
+        "      identifier(𝑝)",
+        "      number(3.1)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex19Xa",
+      "step_id": "STEP_34",
+      "original_expression": "absent = list@(square-root@(2 ^ 2 - 2 ^ 2 * (sine@(theta)) ^ 2), f * r * o * m * S * t * e * p * 3.2)",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  unknown(absent)",
+        "  list",
+        "    root",
+        "      subtract",
+        "        power",
+        "          number(2)",
+        "          number(2)",
+        "        multiply",
+        "          power",
+        "            number(2)",
+        "            number(2)",
+        "          power",
+        "            sin",
+        "              identifier(𝜃)",
+        "            number(2)",
+        "    multiply",
+        "      identifier(𝑓)",
+        "      identifier(𝑟)",
+        "      identifier(𝑜)",
+        "      identifier(𝑚)",
+        "      identifier(𝑆)",
+        "      identifier(𝑡)",
+        "      identifier(𝑒)",
+        "      identifier(𝑝)",
+        "      number(3.2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex19Xb",
+      "step_id": "STEP_35",
+      "original_expression": "absent = list@(square-root@(4 * (1 - (sine ^ 2)@(theta))), f * r * o * m * S * t * e * p * 4.1 * a * n * d * S * t * e * p * 4.2)",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  unknown(absent)",
+        "  list",
+        "    root",
+        "      multiply",
+        "        number(4)",
+        "        subtract",
+        "          number(1)",
+        "          apply",
+        "            identifier(𝜃)",
+        "    multiply",
+        "      identifier(𝑓)",
+        "      identifier(𝑟)",
+        "      identifier(𝑜)",
+        "      identifier(𝑚)",
+        "      identifier(𝑆)",
+        "      identifier(𝑡)",
+        "      identifier(𝑒)",
+        "      identifier(𝑝)",
+        "      number(4.1)",
+        "      identifier(𝑎)",
+        "      identifier(𝑛)",
+        "      identifier(𝑑)",
+        "      identifier(𝑆)",
+        "      identifier(𝑡)",
+        "      identifier(𝑒)",
+        "      identifier(𝑝)",
+        "      number(4.2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex19Xc",
+      "step_id": "STEP_36",
+      "original_expression": "absent = list@(square-root@(4 * (cosine ^ 2)@(theta)), f * r * o * m * S * t * e * p * 4.3)",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  unknown(absent)",
+        "  list",
+        "    root",
+        "      multiply",
+        "        number(4)",
+        "        apply",
+        "          identifier(𝜃)",
+        "    multiply",
+        "      identifier(𝑓)",
+        "      identifier(𝑟)",
+        "      identifier(𝑜)",
+        "      identifier(𝑚)",
+        "      identifier(𝑆)",
+        "      identifier(𝑡)",
+        "      identifier(𝑒)",
+        "      identifier(𝑝)",
+        "      number(4.3)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex20",
+      "step_id": "STEP_37",
+      "original_expression": "Array[[F * r * o * m * S * t * e * p * 1.3, (4 - x ^ 2) ^ (3 / 2) = (square-root@(4 - x ^ 2)) ^ 3], [S * u * b * s * t * i * t * u * t * e * square-root@(4 - x ^ 2) = square-root@(4 * (cosine ^ 2)@(theta)), (square-root@(4 - x ^ 2)) ^ 3 = (square-root@(4 * (cosine ^ 2)@(theta))) ^ 3]]",
+      "labels": [
+        {
+          "label_id": "MAT0004",
+          "name": "FRACTIONAL_EXPONENT_TO_ROOT"
+        },
+        {
+          "label_id": "MAT0006",
+          "name": "CONSTANT_SUBSTITUTION"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  power",
+        "    subtract",
+        "      number(4)",
+        "      power",
+        "        identifier(𝑥)",
+        "        number(2)",
+        "    divide",
+        "      number(3)",
+        "      number(2)",
+        "  power",
+        "    root",
+        "      subtract",
+        "        number(4)",
+        "        power",
+        "          identifier(𝑥)",
+        "          number(2)",
+        "    number(3)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex20",
+      "step_id": "STEP_38",
+      "original_expression": "Array[[F * r * o * m * S * t * e * p * 1.3, (4 - x ^ 2) ^ (3 / 2) = (square-root@(4 - x ^ 2)) ^ 3], [S * u * b * s * t * i * t * u * t * e * square-root@(4 - x ^ 2) = square-root@(4 * (cosine ^ 2)@(theta)), (square-root@(4 - x ^ 2)) ^ 3 = (square-root@(4 * (cosine ^ 2)@(theta))) ^ 3]]",
+      "labels": [
+        {
+          "label_id": "MAT0005",
+          "name": "RADICAL_REWRITE"
+        },
+        {
+          "label_id": "MAT0006",
+          "name": "CONSTANT_SUBSTITUTION"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  power",
+        "    root",
+        "      subtract",
+        "        number(4)",
+        "        power",
+        "          identifier(𝑥)",
+        "          number(2)",
+        "    number(3)",
+        "  power",
+        "    root",
+        "      multiply",
+        "        number(4)",
+        "        apply",
+        "          identifier(𝜃)",
+        "    number(3)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex21",
+      "step_id": "STEP_39",
+      "original_expression": "Array[[S * i * n * c * e * square-root@(a * b) = square-root@(a) * square-root@(b), square-root@(4 * (cosine ^ 2)@(theta)) = square-root@(4) * square-root@((cosine ^ 2)@(theta))], [square-root@(4) = 2, square-root@(4) * square-root@((cosine ^ 2)@(theta)) = 2 * square-root@((cosine ^ 2)@(theta))]]",
+      "labels": [
+        {
+          "label_id": "MAT0005",
+          "name": "RADICAL_REWRITE"
+        },
+        {
+          "label_id": "MAT0008",
+          "name": "ROOT_PRODUCT_RULE"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  root",
+        "    multiply",
+        "      number(4)",
+        "      apply",
+        "        identifier(𝜃)",
+        "  multiply",
+        "    root",
+        "      number(4)",
+        "    root",
+        "      apply",
+        "        identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex21",
+      "step_id": "STEP_40",
+      "original_expression": "Array[[S * i * n * c * e * square-root@(a * b) = square-root@(a) * square-root@(b), square-root@(4 * (cosine ^ 2)@(theta)) = square-root@(4) * square-root@((cosine ^ 2)@(theta))], [square-root@(4) = 2, square-root@(4) * square-root@((cosine ^ 2)@(theta)) = 2 * square-root@((cosine ^ 2)@(theta))]]",
+      "labels": [
+        {
+          "label_id": "MAT0005",
+          "name": "RADICAL_REWRITE"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  multiply",
+        "    root",
+        "      number(4)",
+        "    root",
+        "      apply",
+        "        identifier(𝜃)",
+        "  multiply",
+        "    number(2)",
+        "    root",
+        "      apply",
+        "        identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex22",
+      "step_id": "STEP_41",
+      "original_expression": "Array[[U * s * e * square-root@(u ^ 2) = absolute-value@(u), square-root@((cosine ^ 2)@(theta)) = absolute-value@(cosine@(theta))], [M * u * l * t * i * p * l * y * b * o * t * h * s * i * d * e * s * b * y * 2, 2 * square-root@((cosine ^ 2)@(theta)) = 2 * absolute-value@(cosine@(theta))]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  root",
+        "    apply",
+        "      identifier(𝜃)",
+        "  abs",
+        "    cos",
+        "      identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex22",
+      "step_id": "STEP_42",
+      "original_expression": "Array[[U * s * e * square-root@(u ^ 2) = absolute-value@(u), square-root@((cosine ^ 2)@(theta)) = absolute-value@(cosine@(theta))], [M * u * l * t * i * p * l * y * b * o * t * h * s * i * d * e * s * b * y * 2, 2 * square-root@((cosine ^ 2)@(theta)) = 2 * absolute-value@(cosine@(theta))]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  multiply",
+        "    number(2)",
+        "    root",
+        "      apply",
+        "        identifier(𝜃)",
+        "  multiply",
+        "    number(2)",
+        "    abs",
+        "      cos",
+        "        identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex23",
+      "step_id": "STEP_43",
+      "original_expression": "Array[[C * u * b * e * b * o * t * h * s * i * d * e * s, (square-root@(4 * (cosine ^ 2)@(theta))) ^ 3 = (2 * absolute-value@(cosine@(theta))) ^ 3], [U * s * e * (a * b) ^ 3 = a ^ 3 * b ^ 3, (2 * absolute-value@(cosine@(theta))) ^ 3 = 2 ^ 3 * (absolute-value@(cosine@(theta))) ^ 3], [S * i * m * p * l * i * f * y * 2 ^ 3, (square-root@(4 * (cosine ^ 2)@(theta))) ^ 3 = 8 * (absolute-value@(cosine@(theta))) ^ 3]]",
+      "labels": [
+        {
+          "label_id": "MAT0006",
+          "name": "CONSTANT_SUBSTITUTION"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  power",
+        "    root",
+        "      multiply",
+        "        number(4)",
+        "        apply",
+        "          identifier(𝜃)",
+        "    number(3)",
+        "  power",
+        "    multiply",
+        "      number(2)",
+        "      abs",
+        "        cos",
+        "          identifier(𝜃)",
+        "    number(3)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex23",
+      "step_id": "STEP_44",
+      "original_expression": "Array[[C * u * b * e * b * o * t * h * s * i * d * e * s, (square-root@(4 * (cosine ^ 2)@(theta))) ^ 3 = (2 * absolute-value@(cosine@(theta))) ^ 3], [U * s * e * (a * b) ^ 3 = a ^ 3 * b ^ 3, (2 * absolute-value@(cosine@(theta))) ^ 3 = 2 ^ 3 * (absolute-value@(cosine@(theta))) ^ 3], [S * i * m * p * l * i * f * y * 2 ^ 3, (square-root@(4 * (cosine ^ 2)@(theta))) ^ 3 = 8 * (absolute-value@(cosine@(theta))) ^ 3]]",
+      "labels": [
+        {
+          "label_id": "MAT0002",
+          "name": "POWER_OF_A_PRODUCT"
+        },
+        {
+          "label_id": "MAT0006",
+          "name": "CONSTANT_SUBSTITUTION"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  power",
+        "    multiply",
+        "      number(2)",
+        "      abs",
+        "        cos",
+        "          identifier(𝜃)",
+        "    number(3)",
+        "  multiply",
+        "    power",
+        "      number(2)",
+        "      number(3)",
+        "    power",
+        "      abs",
+        "        cos",
+        "          identifier(𝜃)",
+        "      number(3)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex23",
+      "step_id": "STEP_45",
+      "original_expression": "Array[[C * u * b * e * b * o * t * h * s * i * d * e * s, (square-root@(4 * (cosine ^ 2)@(theta))) ^ 3 = (2 * absolute-value@(cosine@(theta))) ^ 3], [U * s * e * (a * b) ^ 3 = a ^ 3 * b ^ 3, (2 * absolute-value@(cosine@(theta))) ^ 3 = 2 ^ 3 * (absolute-value@(cosine@(theta))) ^ 3], [S * i * m * p * l * i * f * y * 2 ^ 3, (square-root@(4 * (cosine ^ 2)@(theta))) ^ 3 = 8 * (absolute-value@(cosine@(theta))) ^ 3]]",
+      "labels": [
+        {
+          "label_id": "MAT0006",
+          "name": "CONSTANT_SUBSTITUTION"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  power",
+        "    root",
+        "      multiply",
+        "        number(4)",
+        "        apply",
+        "          identifier(𝜃)",
+        "    number(3)",
+        "  multiply",
+        "    number(8)",
+        "    power",
+        "      abs",
+        "        cos",
+        "          identifier(𝜃)",
+        "      number(3)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex24",
+      "step_id": "STEP_46",
+      "original_expression": "Array[[formulae@(F * o * r * x = 2 * sine@(theta), w * e * t * a * k * e * 0 <= theta <= pi / 2), cosine@(theta) >= 0], [S * o * absolute-value@(cosine@(theta)) = cosine@(theta), 8 * (absolute-value@(cosine@(theta))) ^ 3 = 8 * (cosine ^ 3)@(theta)]]",
+      "labels": [],
+      "ast_tree": [
+        "geq",
+        "  cos",
+        "    identifier(𝜃)",
+        "  number(0)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex24",
+      "step_id": "STEP_47",
+      "original_expression": "Array[[formulae@(F * o * r * x = 2 * sine@(theta), w * e * t * a * k * e * 0 <= theta <= pi / 2), cosine@(theta) >= 0], [S * o * absolute-value@(cosine@(theta)) = cosine@(theta), 8 * (absolute-value@(cosine@(theta))) ^ 3 = 8 * (cosine ^ 3)@(theta)]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  multiply",
+        "    number(8)",
+        "    power",
+        "      abs",
+        "        cos",
+        "          identifier(𝜃)",
+        "      number(3)",
+        "  multiply",
+        "    number(8)",
+        "    apply",
+        "      identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex25X",
+      "step_id": "STEP_48",
+      "original_expression": "square-root@(4 * (cosine ^ 2)@(theta)) = list@(2 * square-root@((cosine ^ 2)@(theta)), f * r * o * m * S * t * e * p * 5.2)",
+      "labels": [
+        {
+          "label_id": "MAT0005",
+          "name": "RADICAL_REWRITE"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  root",
+        "    multiply",
+        "      number(4)",
+        "      apply",
+        "        identifier(𝜃)",
+        "  list",
+        "    multiply",
+        "      number(2)",
+        "      root",
+        "        apply",
+        "          identifier(𝜃)",
+        "    multiply",
+        "      identifier(𝑓)",
+        "      identifier(𝑟)",
+        "      identifier(𝑜)",
+        "      identifier(𝑚)",
+        "      identifier(𝑆)",
+        "      identifier(𝑡)",
+        "      identifier(𝑒)",
+        "      identifier(𝑝)",
+        "      number(5.2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex25Xa",
+      "step_id": "STEP_49",
+      "original_expression": "2 * square-root@((cosine ^ 2)@(theta)) = list@(2 * absolute-value@(cosine@(theta)), f * r * o * m * S * t * e * p * 5.3)",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  multiply",
+        "    number(2)",
+        "    root",
+        "      apply",
+        "        identifier(𝜃)",
+        "  list",
+        "    multiply",
+        "      number(2)",
+        "      abs",
+        "        cos",
+        "          identifier(𝜃)",
+        "    multiply",
+        "      identifier(𝑓)",
+        "      identifier(𝑟)",
+        "      identifier(𝑜)",
+        "      identifier(𝑚)",
+        "      identifier(𝑆)",
+        "      identifier(𝑡)",
+        "      identifier(𝑒)",
+        "      identifier(𝑝)",
+        "      number(5.3)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex25Xb",
+      "step_id": "STEP_50",
+      "original_expression": "(square-root@(4 * (cosine ^ 2)@(theta))) ^ 3 = list@(8 * (absolute-value@(cosine@(theta))) ^ 3, f * r * o * m * S * t * e * p * 5.4)",
+      "labels": [
+        {
+          "label_id": "MAT0006",
+          "name": "CONSTANT_SUBSTITUTION"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  power",
+        "    root",
+        "      multiply",
+        "        number(4)",
+        "        apply",
+        "          identifier(𝜃)",
+        "    number(3)",
+        "  list",
+        "    multiply",
+        "      number(8)",
+        "      power",
+        "        abs",
+        "          cos",
+        "            identifier(𝜃)",
+        "        number(3)",
+        "    multiply",
+        "      identifier(𝑓)",
+        "      identifier(𝑟)",
+        "      identifier(𝑜)",
+        "      identifier(𝑚)",
+        "      identifier(𝑆)",
+        "      identifier(𝑡)",
+        "      identifier(𝑒)",
+        "      identifier(𝑝)",
+        "      number(5.4)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex25Xc",
+      "step_id": "STEP_51",
+      "original_expression": "(4 - x ^ 2) ^ (3 / 2) = list@(8 * (cosine ^ 3)@(theta), f * r * o * m * S * t * e * p * 5.6)",
+      "labels": [
+        {
+          "label_id": "MAT0006",
+          "name": "CONSTANT_SUBSTITUTION"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  power",
+        "    subtract",
+        "      number(4)",
+        "      power",
+        "        identifier(𝑥)",
+        "        number(2)",
+        "    divide",
+        "      number(3)",
+        "      number(2)",
+        "  list",
+        "    multiply",
+        "      number(8)",
+        "      apply",
+        "        identifier(𝜃)",
+        "    multiply",
+        "      identifier(𝑓)",
+        "      identifier(𝑟)",
+        "      identifier(𝑜)",
+        "      identifier(𝑚)",
+        "      identifier(𝑆)",
+        "      identifier(𝑡)",
+        "      identifier(𝑒)",
+        "      identifier(𝑝)",
+        "      number(5.6)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex26",
+      "step_id": "STEP_52",
+      "original_expression": "Array[[S * t * a * r * t * w * i * t * h * t * h * e * s * u * b * s * t * i * t * u * t * i * o * n, x = list@(2 * sine@(theta), f * r * o * m * S * t * e * p * 3.1)], [S * q * u * a * r * e * b * o * t * h * s * i * d * e * s, x ^ 2 = (2 * sine@(theta)) ^ 2]]",
+      "labels": [
+        {
+          "label_id": "MAT0006",
+          "name": "CONSTANT_SUBSTITUTION"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  identifier(𝑥)",
+        "  list",
+        "    multiply",
+        "      number(2)",
+        "      sin",
+        "        identifier(𝜃)",
+        "    multiply",
+        "      identifier(𝑓)",
+        "      identifier(𝑟)",
+        "      identifier(𝑜)",
+        "      identifier(𝑚)",
+        "      identifier(𝑆)",
+        "      identifier(𝑡)",
+        "      identifier(𝑒)",
+        "      identifier(𝑝)",
+        "      number(3.1)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex26",
+      "step_id": "STEP_53",
+      "original_expression": "Array[[S * t * a * r * t * w * i * t * h * t * h * e * s * u * b * s * t * i * t * u * t * i * o * n, x = list@(2 * sine@(theta), f * r * o * m * S * t * e * p * 3.1)], [S * q * u * a * r * e * b * o * t * h * s * i * d * e * s, x ^ 2 = (2 * sine@(theta)) ^ 2]]",
+      "labels": [
+        {
+          "label_id": "MAT0006",
+          "name": "CONSTANT_SUBSTITUTION"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  power",
+        "    identifier(𝑥)",
+        "    number(2)",
+        "  power",
+        "    multiply",
+        "      number(2)",
+        "      sin",
+        "        identifier(𝜃)",
+        "    number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex27",
+      "step_id": "STEP_54",
+      "original_expression": "Array[[formulae@(L * e * t * a = 2, b = sine@(theta)), (a * b) ^ 2 = a ^ 2 * b ^ 2], [S * u * b * s * t * i * t * u * t * e * i * n * t * o * t * h * e * r * u * l * e, (2 * sine@(theta)) ^ 2 = 2 ^ 2 * (sine@(theta)) ^ 2]]",
+      "labels": [
+        {
+          "label_id": "MAT0002",
+          "name": "POWER_OF_A_PRODUCT"
+        },
+        {
+          "label_id": "MAT0006",
+          "name": "CONSTANT_SUBSTITUTION"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  power",
+        "    multiply",
+        "      identifier(𝑎)",
+        "      identifier(𝑏)",
+        "    number(2)",
+        "  multiply",
+        "    power",
+        "      identifier(𝑎)",
+        "      number(2)",
+        "    power",
+        "      identifier(𝑏)",
+        "      number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex27",
+      "step_id": "STEP_55",
+      "original_expression": "Array[[formulae@(L * e * t * a = 2, b = sine@(theta)), (a * b) ^ 2 = a ^ 2 * b ^ 2], [S * u * b * s * t * i * t * u * t * e * i * n * t * o * t * h * e * r * u * l * e, (2 * sine@(theta)) ^ 2 = 2 ^ 2 * (sine@(theta)) ^ 2]]",
+      "labels": [
+        {
+          "label_id": "MAT0002",
+          "name": "POWER_OF_A_PRODUCT"
+        },
+        {
+          "label_id": "MAT0006",
+          "name": "CONSTANT_SUBSTITUTION"
+        },
+        {
+          "label_id": "MAT0010",
+          "name": "TRIG_SQUARE_REWRITE"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  power",
+        "    multiply",
+        "      number(2)",
+        "      sin",
+        "        identifier(𝜃)",
+        "    number(2)",
+        "  multiply",
+        "    power",
+        "      number(2)",
+        "      number(2)",
+        "    power",
+        "      sin",
+        "        identifier(𝜃)",
+        "      number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex28",
+      "step_id": "STEP_56",
+      "original_expression": "Array[[C * o * m * p * u * t * e * 2 ^ 2, 2 ^ 2 = 4], [B * y * s * q * u * a * r * e * o * f * t * r * i * g * o * n * o * m * e * t * r * i * c * f * u * n * c * t * i * o * n * s, (sine@(theta)) ^ 2 = (sine ^ 2)@(theta)], [S * u * b * s * t * i * t * u * t * e, 2 ^ 2 * (sine@(theta)) ^ 2 = 4 * (sine ^ 2)@(theta)], [T * h * e * r * e * f * o * r * e, x ^ 2 = 4 * (sine ^ 2)@(theta)]]",
+      "labels": [
+        {
+          "label_id": "MAT0006",
+          "name": "CONSTANT_SUBSTITUTION"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  power",
+        "    number(2)",
+        "    number(2)",
+        "  number(4)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex28",
+      "step_id": "STEP_57",
+      "original_expression": "Array[[C * o * m * p * u * t * e * 2 ^ 2, 2 ^ 2 = 4], [B * y * s * q * u * a * r * e * o * f * t * r * i * g * o * n * o * m * e * t * r * i * c * f * u * n * c * t * i * o * n * s, (sine@(theta)) ^ 2 = (sine ^ 2)@(theta)], [S * u * b * s * t * i * t * u * t * e, 2 ^ 2 * (sine@(theta)) ^ 2 = 4 * (sine ^ 2)@(theta)], [T * h * e * r * e * f * o * r * e, x ^ 2 = 4 * (sine ^ 2)@(theta)]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  power",
+        "    sin",
+        "      identifier(𝜃)",
+        "    number(2)",
+        "  apply",
+        "    identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex28",
+      "step_id": "STEP_58",
+      "original_expression": "Array[[C * o * m * p * u * t * e * 2 ^ 2, 2 ^ 2 = 4], [B * y * s * q * u * a * r * e * o * f * t * r * i * g * o * n * o * m * e * t * r * i * c * f * u * n * c * t * i * o * n * s, (sine@(theta)) ^ 2 = (sine ^ 2)@(theta)], [S * u * b * s * t * i * t * u * t * e, 2 ^ 2 * (sine@(theta)) ^ 2 = 4 * (sine ^ 2)@(theta)], [T * h * e * r * e * f * o * r * e, x ^ 2 = 4 * (sine ^ 2)@(theta)]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  multiply",
+        "    power",
+        "      number(2)",
+        "      number(2)",
+        "    power",
+        "      sin",
+        "        identifier(𝜃)",
+        "      number(2)",
+        "  multiply",
+        "    number(4)",
+        "    apply",
+        "      identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex28",
+      "step_id": "STEP_59",
+      "original_expression": "Array[[C * o * m * p * u * t * e * 2 ^ 2, 2 ^ 2 = 4], [B * y * s * q * u * a * r * e * o * f * t * r * i * g * o * n * o * m * e * t * r * i * c * f * u * n * c * t * i * o * n * s, (sine@(theta)) ^ 2 = (sine ^ 2)@(theta)], [S * u * b * s * t * i * t * u * t * e, 2 ^ 2 * (sine@(theta)) ^ 2 = 4 * (sine ^ 2)@(theta)], [T * h * e * r * e * f * o * r * e, x ^ 2 = 4 * (sine ^ 2)@(theta)]]",
+      "labels": [
+        {
+          "label_id": "MAT0006",
+          "name": "CONSTANT_SUBSTITUTION"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  power",
+        "    identifier(𝑥)",
+        "    number(2)",
+        "  multiply",
+        "    number(4)",
+        "    apply",
+        "      identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex29",
+      "step_id": "STEP_60",
+      "original_expression": "Array[[S * t * a * r * t * w * i * t * h * t * h * e * s * u * b * s * t * i * t * u * t * i * o * n, x = list@(2 * sine@(theta), f * r * o * m * S * t * e * p * 3.1)], [D * i * f * f * e * r * e * n * t * i * a * t * e * b * o * t * h * s * i * d * e * s * w * i * t * h * r * e * s * p * e * c * t * t * o * theta, (d * x) / (d * theta) = (d / (d * theta)) * 2 * sine@(theta)], [U * s * e * t * h * e * c * o * n * s * t * a * n * t * m * u * l * t * i * p * l * e * r * u * l * e, (d * x) / (d * theta) = 2 * (d / (d * theta)) * sine@(theta)], [S * i * n * c * e * (d / (d * theta)) * sine@(theta) = cosine@(theta), (d * x) / (d * theta) = 2 * cosine@(theta)]]",
+      "labels": [
+        {
+          "label_id": "MAT0006",
+          "name": "CONSTANT_SUBSTITUTION"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  identifier(𝑥)",
+        "  list",
+        "    multiply",
+        "      number(2)",
+        "      sin",
+        "        identifier(𝜃)",
+        "    multiply",
+        "      identifier(𝑓)",
+        "      identifier(𝑟)",
+        "      identifier(𝑜)",
+        "      identifier(𝑚)",
+        "      identifier(𝑆)",
+        "      identifier(𝑡)",
+        "      identifier(𝑒)",
+        "      identifier(𝑝)",
+        "      number(3.1)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex29",
+      "step_id": "STEP_61",
+      "original_expression": "Array[[S * t * a * r * t * w * i * t * h * t * h * e * s * u * b * s * t * i * t * u * t * i * o * n, x = list@(2 * sine@(theta), f * r * o * m * S * t * e * p * 3.1)], [D * i * f * f * e * r * e * n * t * i * a * t * e * b * o * t * h * s * i * d * e * s * w * i * t * h * r * e * s * p * e * c * t * t * o * theta, (d * x) / (d * theta) = (d / (d * theta)) * 2 * sine@(theta)], [U * s * e * t * h * e * c * o * n * s * t * a * n * t * m * u * l * t * i * p * l * e * r * u * l * e, (d * x) / (d * theta) = 2 * (d / (d * theta)) * sine@(theta)], [S * i * n * c * e * (d / (d * theta)) * sine@(theta) = cosine@(theta), (d * x) / (d * theta) = 2 * cosine@(theta)]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  divide",
+        "    multiply",
+        "      identifier(𝑑)",
+        "      identifier(𝑥)",
+        "    multiply",
+        "      identifier(𝑑)",
+        "      identifier(𝜃)",
+        "  multiply",
+        "    divide",
+        "      identifier(𝑑)",
+        "      multiply",
+        "        identifier(𝑑)",
+        "        identifier(𝜃)",
+        "    multiply",
+        "      number(2)",
+        "      sin",
+        "        identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex29",
+      "step_id": "STEP_62",
+      "original_expression": "Array[[S * t * a * r * t * w * i * t * h * t * h * e * s * u * b * s * t * i * t * u * t * i * o * n, x = list@(2 * sine@(theta), f * r * o * m * S * t * e * p * 3.1)], [D * i * f * f * e * r * e * n * t * i * a * t * e * b * o * t * h * s * i * d * e * s * w * i * t * h * r * e * s * p * e * c * t * t * o * theta, (d * x) / (d * theta) = (d / (d * theta)) * 2 * sine@(theta)], [U * s * e * t * h * e * c * o * n * s * t * a * n * t * m * u * l * t * i * p * l * e * r * u * l * e, (d * x) / (d * theta) = 2 * (d / (d * theta)) * sine@(theta)], [S * i * n * c * e * (d / (d * theta)) * sine@(theta) = cosine@(theta), (d * x) / (d * theta) = 2 * cosine@(theta)]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  divide",
+        "    multiply",
+        "      identifier(𝑑)",
+        "      identifier(𝑥)",
+        "    multiply",
+        "      identifier(𝑑)",
+        "      identifier(𝜃)",
+        "  multiply",
+        "    number(2)",
+        "    divide",
+        "      identifier(𝑑)",
+        "      multiply",
+        "        identifier(𝑑)",
+        "        identifier(𝜃)",
+        "    sin",
+        "      identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex29",
+      "step_id": "STEP_63",
+      "original_expression": "Array[[S * t * a * r * t * w * i * t * h * t * h * e * s * u * b * s * t * i * t * u * t * i * o * n, x = list@(2 * sine@(theta), f * r * o * m * S * t * e * p * 3.1)], [D * i * f * f * e * r * e * n * t * i * a * t * e * b * o * t * h * s * i * d * e * s * w * i * t * h * r * e * s * p * e * c * t * t * o * theta, (d * x) / (d * theta) = (d / (d * theta)) * 2 * sine@(theta)], [U * s * e * t * h * e * c * o * n * s * t * a * n * t * m * u * l * t * i * p * l * e * r * u * l * e, (d * x) / (d * theta) = 2 * (d / (d * theta)) * sine@(theta)], [S * i * n * c * e * (d / (d * theta)) * sine@(theta) = cosine@(theta), (d * x) / (d * theta) = 2 * cosine@(theta)]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  divide",
+        "    multiply",
+        "      identifier(𝑑)",
+        "      identifier(𝑥)",
+        "    multiply",
+        "      identifier(𝑑)",
+        "      identifier(𝜃)",
+        "  multiply",
+        "    number(2)",
+        "    cos",
+        "      identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex30",
+      "step_id": "STEP_64",
+      "original_expression": "Array[[S * t * a * r * t * w * i * t * h, (d * x) / (d * theta) = 2 * cosine@(theta)], [M * u * l * t * i * p * l * y * b * o * t * h * s * i * d * e * s * b * y * d * theta, d * theta * ((d * x) / (d * theta)) = 2 * cosine@(theta) * d * theta], [S * o, d * x = 2 * cosine@(theta * d * theta)]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  divide",
+        "    multiply",
+        "      identifier(𝑑)",
+        "      identifier(𝑥)",
+        "    multiply",
+        "      identifier(𝑑)",
+        "      identifier(𝜃)",
+        "  multiply",
+        "    number(2)",
+        "    cos",
+        "      identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex30",
+      "step_id": "STEP_65",
+      "original_expression": "Array[[S * t * a * r * t * w * i * t * h, (d * x) / (d * theta) = 2 * cosine@(theta)], [M * u * l * t * i * p * l * y * b * o * t * h * s * i * d * e * s * b * y * d * theta, d * theta * ((d * x) / (d * theta)) = 2 * cosine@(theta) * d * theta], [S * o, d * x = 2 * cosine@(theta * d * theta)]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  multiply",
+        "    identifier(𝑑)",
+        "    identifier(𝜃)",
+        "    divide",
+        "      multiply",
+        "        identifier(𝑑)",
+        "        identifier(𝑥)",
+        "      multiply",
+        "        identifier(𝑑)",
+        "        identifier(𝜃)",
+        "  multiply",
+        "    multiply",
+        "      number(2)",
+        "      cos",
+        "        identifier(𝜃)",
+        "    identifier(𝑑)",
+        "    identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex30",
+      "step_id": "STEP_66",
+      "original_expression": "Array[[S * t * a * r * t * w * i * t * h, (d * x) / (d * theta) = 2 * cosine@(theta)], [M * u * l * t * i * p * l * y * b * o * t * h * s * i * d * e * s * b * y * d * theta, d * theta * ((d * x) / (d * theta)) = 2 * cosine@(theta) * d * theta], [S * o, d * x = 2 * cosine@(theta * d * theta)]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  multiply",
+        "    identifier(𝑑)",
+        "    identifier(𝑥)",
+        "  multiply",
+        "    number(2)",
+        "    cos",
+        "      multiply",
+        "        identifier(𝜃)",
+        "        identifier(𝑑)",
+        "        identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex31X",
+      "step_id": "STEP_67",
+      "original_expression": "x ^ 2 = list@(4 * (sine ^ 2)@(theta), f * r * o * m * S * t * e * p * 6)",
+      "labels": [
+        {
+          "label_id": "MAT0006",
+          "name": "CONSTANT_SUBSTITUTION"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  power",
+        "    identifier(𝑥)",
+        "    number(2)",
+        "  list",
+        "    multiply",
+        "      number(4)",
+        "      apply",
+        "        identifier(𝜃)",
+        "    multiply",
+        "      identifier(𝑓)",
+        "      identifier(𝑟)",
+        "      identifier(𝑜)",
+        "      identifier(𝑚)",
+        "      identifier(𝑆)",
+        "      identifier(𝑡)",
+        "      identifier(𝑒)",
+        "      identifier(𝑝)",
+        "      number(6)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex31Xa",
+      "step_id": "STEP_68",
+      "original_expression": "(4 - x ^ 2) ^ (3 / 2) = list@(8 * (cosine ^ 3)@(theta), f * r * o * m * S * t * e * p * 1 * t * o * S * t * e * p * 5)",
+      "labels": [
+        {
+          "label_id": "MAT0006",
+          "name": "CONSTANT_SUBSTITUTION"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  power",
+        "    subtract",
+        "      number(4)",
+        "      power",
+        "        identifier(𝑥)",
+        "        number(2)",
+        "    divide",
+        "      number(3)",
+        "      number(2)",
+        "  list",
+        "    multiply",
+        "      number(8)",
+        "      apply",
+        "        identifier(𝜃)",
+        "    multiply",
+        "      identifier(𝑓)",
+        "      identifier(𝑟)",
+        "      identifier(𝑜)",
+        "      identifier(𝑚)",
+        "      identifier(𝑆)",
+        "      identifier(𝑡)",
+        "      identifier(𝑒)",
+        "      identifier(𝑝)",
+        "      number(1)",
+        "      identifier(𝑡)",
+        "      identifier(𝑜)",
+        "      identifier(𝑆)",
+        "      identifier(𝑡)",
+        "      identifier(𝑒)",
+        "      identifier(𝑝)",
+        "      number(5)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex31Xb",
+      "step_id": "STEP_69",
+      "original_expression": "d * x = list@(2 * cosine@(theta * d * theta), f * r * o * m * S * t * e * p * 7)",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  multiply",
+        "    identifier(𝑑)",
+        "    identifier(𝑥)",
+        "  list",
+        "    multiply",
+        "      number(2)",
+        "      cos",
+        "        multiply",
+        "          identifier(𝜃)",
+        "          identifier(𝑑)",
+        "          identifier(𝜃)",
+        "    multiply",
+        "      identifier(𝑓)",
+        "      identifier(𝑟)",
+        "      identifier(𝑜)",
+        "      identifier(𝑚)",
+        "      identifier(𝑆)",
+        "      identifier(𝑡)",
+        "      identifier(𝑒)",
+        "      identifier(𝑝)",
+        "      number(7)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex32",
+      "step_id": "STEP_70",
+      "original_expression": "Array[[S * t * a * r * t * w * i * t * h * t * h * e * o * r * i * g * i * n * a * l * i * n * t * e * g * r * a * l, integral@((x ^ 2 / (4 - x ^ 2) ^ (3 / 2)) * differential-d@(x))], [S * u * b * s * t * i * t * u * t * e * t * h * e * e * x * p * r * e * s * s * i * o * n * s * f * r * o * m * S * t * e * p * 8.1, integral@((x ^ 2 / (4 - x ^ 2) ^ (3 / 2)) * differential-d@(x)) = integral@(((4 * (sine ^ 2)@(theta)) / (8 * (cosine ^ 3)@(theta))) * 2 * cosine@(theta * d * theta))]]",
+      "labels": [],
+      "ast_tree": [
+        "int",
+        "  multiply",
+        "    divide",
+        "      power",
+        "        identifier(𝑥)",
+        "        number(2)",
+        "      power",
+        "        subtract",
+        "          number(4)",
+        "          power",
+        "            identifier(𝑥)",
+        "            number(2)",
+        "        divide",
+        "          number(3)",
+        "          number(2)",
+        "    differential-d",
+        "      identifier(𝑥)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex32",
+      "step_id": "STEP_71",
+      "original_expression": "Array[[S * t * a * r * t * w * i * t * h * t * h * e * o * r * i * g * i * n * a * l * i * n * t * e * g * r * a * l, integral@((x ^ 2 / (4 - x ^ 2) ^ (3 / 2)) * differential-d@(x))], [S * u * b * s * t * i * t * u * t * e * t * h * e * e * x * p * r * e * s * s * i * o * n * s * f * r * o * m * S * t * e * p * 8.1, integral@((x ^ 2 / (4 - x ^ 2) ^ (3 / 2)) * differential-d@(x)) = integral@(((4 * (sine ^ 2)@(theta)) / (8 * (cosine ^ 3)@(theta))) * 2 * cosine@(theta * d * theta))]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  int",
+        "    multiply",
+        "      divide",
+        "        power",
+        "          identifier(𝑥)",
+        "          number(2)",
+        "        power",
+        "          subtract",
+        "            number(4)",
+        "            power",
+        "              identifier(𝑥)",
+        "              number(2)",
+        "          divide",
+        "            number(3)",
+        "            number(2)",
+        "      differential-d",
+        "        identifier(𝑥)",
+        "  int",
+        "    multiply",
+        "      divide",
+        "        multiply",
+        "          number(4)",
+        "          apply",
+        "            identifier(𝜃)",
+        "        multiply",
+        "          number(8)",
+        "          apply",
+        "            identifier(𝜃)",
+        "      multiply",
+        "        number(2)",
+        "        cos",
+        "          multiply",
+        "            identifier(𝜃)",
+        "            identifier(𝑑)",
+        "            identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex33",
+      "step_id": "STEP_72",
+      "original_expression": "Array[[, integral@(((4 * (sine ^ 2)@(theta)) / (8 * (cosine ^ 3)@(theta))) * 2 * cosine@(theta * d * theta)) = integral@((((4 cdot 2) * (sine ^ 2)@(theta) * cosine@(theta)) / (8 * (cosine ^ 3)@(theta))) * differential-d@(theta))], [(S * i * m * p * l * i * f * y * 4) cdot 2, integral@((((4 cdot 2) * (sine ^ 2)@(theta) * cosine@(theta)) / (8 * (cosine ^ 3)@(theta))) * differential-d@(theta)) = integral@(((8 * (sine ^ 2)@(theta) * cosine@(theta)) / (8 * (cosine ^ 3)@(theta))) * differential-d@(theta))]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  int",
+        "    multiply",
+        "      divide",
+        "        multiply",
+        "          number(4)",
+        "          apply",
+        "            identifier(𝜃)",
+        "        multiply",
+        "          number(8)",
+        "          apply",
+        "            identifier(𝜃)",
+        "      number(2)",
+        "      cos",
+        "        multiply",
+        "          identifier(𝜃)",
+        "          identifier(𝑑)",
+        "          identifier(𝜃)",
+        "  int",
+        "    multiply",
+        "      divide",
+        "        multiply",
+        "          ci",
+        "            number(4)",
+        "            number(2)",
+        "          apply",
+        "            identifier(𝜃)",
+        "          cos",
+        "            identifier(𝜃)",
+        "        multiply",
+        "          number(8)",
+        "          apply",
+        "            identifier(𝜃)",
+        "      differential-d",
+        "        identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex33",
+      "step_id": "STEP_73",
+      "original_expression": "Array[[, integral@(((4 * (sine ^ 2)@(theta)) / (8 * (cosine ^ 3)@(theta))) * 2 * cosine@(theta * d * theta)) = integral@((((4 cdot 2) * (sine ^ 2)@(theta) * cosine@(theta)) / (8 * (cosine ^ 3)@(theta))) * differential-d@(theta))], [(S * i * m * p * l * i * f * y * 4) cdot 2, integral@((((4 cdot 2) * (sine ^ 2)@(theta) * cosine@(theta)) / (8 * (cosine ^ 3)@(theta))) * differential-d@(theta)) = integral@(((8 * (sine ^ 2)@(theta) * cosine@(theta)) / (8 * (cosine ^ 3)@(theta))) * differential-d@(theta))]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  int",
+        "    multiply",
+        "      divide",
+        "        multiply",
+        "          ci",
+        "            number(4)",
+        "            number(2)",
+        "          apply",
+        "            identifier(𝜃)",
+        "          cos",
+        "            identifier(𝜃)",
+        "        multiply",
+        "          number(8)",
+        "          apply",
+        "            identifier(𝜃)",
+        "      differential-d",
+        "        identifier(𝜃)",
+        "  int",
+        "    multiply",
+        "      divide",
+        "        multiply",
+        "          number(8)",
+        "          apply",
+        "            identifier(𝜃)",
+        "          cos",
+        "            identifier(𝜃)",
+        "        multiply",
+        "          number(8)",
+        "          apply",
+        "            identifier(𝜃)",
+        "      differential-d",
+        "        identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex34",
+      "step_id": "STEP_74",
+      "original_expression": "Array[[C * a * n * c * e * l * t * h * e * c * o * m * m * o * n * f * a * c * t * o * r * 8, integral@(((8 * (sine ^ 2)@(theta) * cosine@(theta)) / (8 * (cosine ^ 3)@(theta))) * differential-d@(theta)) = integral@((((sine ^ 2)@(theta) * cosine@(theta)) / (cosine ^ 3)@(theta)) * differential-d@(theta))]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  int",
+        "    multiply",
+        "      divide",
+        "        multiply",
+        "          number(8)",
+        "          apply",
+        "            identifier(𝜃)",
+        "          cos",
+        "            identifier(𝜃)",
+        "        multiply",
+        "          number(8)",
+        "          apply",
+        "            identifier(𝜃)",
+        "      differential-d",
+        "        identifier(𝜃)",
+        "  int",
+        "    multiply",
+        "      divide",
+        "        multiply",
+        "          apply",
+        "            identifier(𝜃)",
+        "          cos",
+        "            identifier(𝜃)",
+        "        apply",
+        "          identifier(𝜃)",
+        "      differential-d",
+        "        identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex35",
+      "step_id": "STEP_75",
+      "original_expression": "Array[[R * e * w * r * i * t * e * (cosine ^ 3)@(theta), (cosine ^ 3)@(theta) = (cosine ^ 2)@(theta) * cosine@(theta)], [S * u * b * s * t * i * t * u * t * e * i * n * t * o * t * h * e * d * e * n * o * m * i * n * a * t * o * r, integral@((((sine ^ 2)@(theta) * cosine@(theta)) / (cosine ^ 3)@(theta)) * differential-d@(theta)) = integral@((((sine ^ 2)@(theta) * cosine@(theta)) / ((cosine ^ 2)@(theta) * cosine@(theta))) * differential-d@(theta))], [C * a * n * c * e * l * cosine@(theta), integral@((((sine ^ 2)@(theta) * cosine@(theta)) / ((cosine ^ 2)@(theta) * cosine@(theta))) * differential-d@(theta)) = integral@(((sine ^ 2)@(theta) / (cosine ^ 2)@(theta)) * differential-d@(theta))]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  apply",
+        "    identifier(𝜃)",
+        "  multiply",
+        "    apply",
+        "      identifier(𝜃)",
+        "    cos",
+        "      identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex35",
+      "step_id": "STEP_76",
+      "original_expression": "Array[[R * e * w * r * i * t * e * (cosine ^ 3)@(theta), (cosine ^ 3)@(theta) = (cosine ^ 2)@(theta) * cosine@(theta)], [S * u * b * s * t * i * t * u * t * e * i * n * t * o * t * h * e * d * e * n * o * m * i * n * a * t * o * r, integral@((((sine ^ 2)@(theta) * cosine@(theta)) / (cosine ^ 3)@(theta)) * differential-d@(theta)) = integral@((((sine ^ 2)@(theta) * cosine@(theta)) / ((cosine ^ 2)@(theta) * cosine@(theta))) * differential-d@(theta))], [C * a * n * c * e * l * cosine@(theta), integral@((((sine ^ 2)@(theta) * cosine@(theta)) / ((cosine ^ 2)@(theta) * cosine@(theta))) * differential-d@(theta)) = integral@(((sine ^ 2)@(theta) / (cosine ^ 2)@(theta)) * differential-d@(theta))]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  int",
+        "    multiply",
+        "      divide",
+        "        multiply",
+        "          apply",
+        "            identifier(𝜃)",
+        "          cos",
+        "            identifier(𝜃)",
+        "        apply",
+        "          identifier(𝜃)",
+        "      differential-d",
+        "        identifier(𝜃)",
+        "  int",
+        "    multiply",
+        "      divide",
+        "        multiply",
+        "          apply",
+        "            identifier(𝜃)",
+        "          cos",
+        "            identifier(𝜃)",
+        "        multiply",
+        "          apply",
+        "            identifier(𝜃)",
+        "          cos",
+        "            identifier(𝜃)",
+        "      differential-d",
+        "        identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex35",
+      "step_id": "STEP_77",
+      "original_expression": "Array[[R * e * w * r * i * t * e * (cosine ^ 3)@(theta), (cosine ^ 3)@(theta) = (cosine ^ 2)@(theta) * cosine@(theta)], [S * u * b * s * t * i * t * u * t * e * i * n * t * o * t * h * e * d * e * n * o * m * i * n * a * t * o * r, integral@((((sine ^ 2)@(theta) * cosine@(theta)) / (cosine ^ 3)@(theta)) * differential-d@(theta)) = integral@((((sine ^ 2)@(theta) * cosine@(theta)) / ((cosine ^ 2)@(theta) * cosine@(theta))) * differential-d@(theta))], [C * a * n * c * e * l * cosine@(theta), integral@((((sine ^ 2)@(theta) * cosine@(theta)) / ((cosine ^ 2)@(theta) * cosine@(theta))) * differential-d@(theta)) = integral@(((sine ^ 2)@(theta) / (cosine ^ 2)@(theta)) * differential-d@(theta))]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  int",
+        "    multiply",
+        "      divide",
+        "        multiply",
+        "          apply",
+        "            identifier(𝜃)",
+        "          cos",
+        "            identifier(𝜃)",
+        "        multiply",
+        "          apply",
+        "            identifier(𝜃)",
+        "          cos",
+        "            identifier(𝜃)",
+        "      differential-d",
+        "        identifier(𝜃)",
+        "  int",
+        "    multiply",
+        "      divide",
+        "        apply",
+        "          identifier(𝜃)",
+        "        apply",
+        "          identifier(𝜃)",
+        "      differential-d",
+        "        identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex36",
+      "step_id": "STEP_78",
+      "original_expression": "Array[[B * y * d * e * f * i * n * i * t * i * o * n * o * f * t * a * n * g * e * n * t, tangent@(theta) = sine@(theta) / cosine@(theta)], [S * q * u * a * r * e * b * o * t * h * s * i * d * e * s, (tangent ^ 2)@(theta) = (sine ^ 2)@(theta) / (cosine ^ 2)@(theta)], [R * e * w * r * i * t * e * t * h * e * i * n * t * e * g * r * a * n * d, integral@(((sine ^ 2)@(theta) / (cosine ^ 2)@(theta)) * differential-d@(theta)) = integral@((tangent ^ 2)@(theta * d * theta))]]",
+      "labels": [
+        {
+          "label_id": "MAT0015",
+          "name": "TRIG_RATIO_REWRITE"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  tan",
+        "    identifier(𝜃)",
+        "  divide",
+        "    sin",
+        "      identifier(𝜃)",
+        "    cos",
+        "      identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex36",
+      "step_id": "STEP_79",
+      "original_expression": "Array[[B * y * d * e * f * i * n * i * t * i * o * n * o * f * t * a * n * g * e * n * t, tangent@(theta) = sine@(theta) / cosine@(theta)], [S * q * u * a * r * e * b * o * t * h * s * i * d * e * s, (tangent ^ 2)@(theta) = (sine ^ 2)@(theta) / (cosine ^ 2)@(theta)], [R * e * w * r * i * t * e * t * h * e * i * n * t * e * g * r * a * n * d, integral@(((sine ^ 2)@(theta) / (cosine ^ 2)@(theta)) * differential-d@(theta)) = integral@((tangent ^ 2)@(theta * d * theta))]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  apply",
+        "    identifier(𝜃)",
+        "  divide",
+        "    apply",
+        "      identifier(𝜃)",
+        "    apply",
+        "      identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex36",
+      "step_id": "STEP_80",
+      "original_expression": "Array[[B * y * d * e * f * i * n * i * t * i * o * n * o * f * t * a * n * g * e * n * t, tangent@(theta) = sine@(theta) / cosine@(theta)], [S * q * u * a * r * e * b * o * t * h * s * i * d * e * s, (tangent ^ 2)@(theta) = (sine ^ 2)@(theta) / (cosine ^ 2)@(theta)], [R * e * w * r * i * t * e * t * h * e * i * n * t * e * g * r * a * n * d, integral@(((sine ^ 2)@(theta) / (cosine ^ 2)@(theta)) * differential-d@(theta)) = integral@((tangent ^ 2)@(theta * d * theta))]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  int",
+        "    multiply",
+        "      divide",
+        "        apply",
+        "          identifier(𝜃)",
+        "        apply",
+        "          identifier(𝜃)",
+        "      differential-d",
+        "        identifier(𝜃)",
+        "  int",
+        "    apply",
+        "      multiply",
+        "        identifier(𝜃)",
+        "        identifier(𝑑)",
+        "        identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex37",
+      "step_id": "STEP_81",
+      "original_expression": "Array[[U * s * e * t * h * e * t * r * i * g * o * n * o * m * e * t * r * y * i * d * e * n * t * i * t * y, (tangent ^ 2)@(theta) = (secant ^ 2)@(theta) - 1], [S * u * b * s * t * i * t * u * t * e * i * n * t * o * t * h * e * i * n * t * e * g * r * a * l, integral@((tangent ^ 2)@(theta * d * theta)) = integral@(((secant ^ 2)@(theta) - 1) * differential-d@(theta))], [B * y * a * d * d * i * t * i * v * e * p * r * o * p * e * r * t * y * o * f * i * n * t * e * g * r * a * l * s, integral@(((secant ^ 2)@(theta) - 1) * differential-d@(theta)) = integral@((secant ^ 2)@(theta * d * theta)) - integral@(1 * differential-d@(theta))]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  apply",
+        "    identifier(𝜃)",
+        "  subtract",
+        "    apply",
+        "      identifier(𝜃)",
+        "    number(1)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex37",
+      "step_id": "STEP_82",
+      "original_expression": "Array[[U * s * e * t * h * e * t * r * i * g * o * n * o * m * e * t * r * y * i * d * e * n * t * i * t * y, (tangent ^ 2)@(theta) = (secant ^ 2)@(theta) - 1], [S * u * b * s * t * i * t * u * t * e * i * n * t * o * t * h * e * i * n * t * e * g * r * a * l, integral@((tangent ^ 2)@(theta * d * theta)) = integral@(((secant ^ 2)@(theta) - 1) * differential-d@(theta))], [B * y * a * d * d * i * t * i * v * e * p * r * o * p * e * r * t * y * o * f * i * n * t * e * g * r * a * l * s, integral@(((secant ^ 2)@(theta) - 1) * differential-d@(theta)) = integral@((secant ^ 2)@(theta * d * theta)) - integral@(1 * differential-d@(theta))]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  int",
+        "    apply",
+        "      multiply",
+        "        identifier(𝜃)",
+        "        identifier(𝑑)",
+        "        identifier(𝜃)",
+        "  int",
+        "    multiply",
+        "      subtract",
+        "        apply",
+        "          identifier(𝜃)",
+        "        number(1)",
+        "      differential-d",
+        "        identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex37",
+      "step_id": "STEP_83",
+      "original_expression": "Array[[U * s * e * t * h * e * t * r * i * g * o * n * o * m * e * t * r * y * i * d * e * n * t * i * t * y, (tangent ^ 2)@(theta) = (secant ^ 2)@(theta) - 1], [S * u * b * s * t * i * t * u * t * e * i * n * t * o * t * h * e * i * n * t * e * g * r * a * l, integral@((tangent ^ 2)@(theta * d * theta)) = integral@(((secant ^ 2)@(theta) - 1) * differential-d@(theta))], [B * y * a * d * d * i * t * i * v * e * p * r * o * p * e * r * t * y * o * f * i * n * t * e * g * r * a * l * s, integral@(((secant ^ 2)@(theta) - 1) * differential-d@(theta)) = integral@((secant ^ 2)@(theta * d * theta)) - integral@(1 * differential-d@(theta))]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  int",
+        "    multiply",
+        "      subtract",
+        "        apply",
+        "          identifier(𝜃)",
+        "        number(1)",
+        "      differential-d",
+        "        identifier(𝜃)",
+        "  subtract",
+        "    int",
+        "      apply",
+        "        multiply",
+        "          identifier(𝜃)",
+        "          identifier(𝑑)",
+        "          identifier(𝜃)",
+        "    int",
+        "      multiply",
+        "        number(1)",
+        "        differential-d",
+        "          identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex38",
+      "step_id": "STEP_84",
+      "original_expression": "Array[[I * n * t * e * g * r * a * t * e * (secant ^ 2)@(theta), integral@((secant ^ 2)@(theta * d * theta)) = tangent@(theta)], [I * n * t * e * g * r * a * t * e * 1, integral@(1 * differential-d@(theta)) = theta], [C * o * m * b * i * n * e * t * h * e * r * e * s * u * l * t, integral@((secant ^ 2)@(theta * d * theta)) - integral@(1 * differential-d@(theta)) = (tangent@(theta) - theta) + C], [T * h * e * r * e * f * o * r * e, integral@((tangent ^ 2)@(theta * d * theta)) = (tangent@(theta) - theta) + C]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  int",
+        "    apply",
+        "      multiply",
+        "        identifier(𝜃)",
+        "        identifier(𝑑)",
+        "        identifier(𝜃)",
+        "  tan",
+        "    identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex38",
+      "step_id": "STEP_85",
+      "original_expression": "Array[[I * n * t * e * g * r * a * t * e * (secant ^ 2)@(theta), integral@((secant ^ 2)@(theta * d * theta)) = tangent@(theta)], [I * n * t * e * g * r * a * t * e * 1, integral@(1 * differential-d@(theta)) = theta], [C * o * m * b * i * n * e * t * h * e * r * e * s * u * l * t, integral@((secant ^ 2)@(theta * d * theta)) - integral@(1 * differential-d@(theta)) = (tangent@(theta) - theta) + C], [T * h * e * r * e * f * o * r * e, integral@((tangent ^ 2)@(theta * d * theta)) = (tangent@(theta) - theta) + C]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  int",
+        "    multiply",
+        "      number(1)",
+        "      differential-d",
+        "        identifier(𝜃)",
+        "  identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex38",
+      "step_id": "STEP_86",
+      "original_expression": "Array[[I * n * t * e * g * r * a * t * e * (secant ^ 2)@(theta), integral@((secant ^ 2)@(theta * d * theta)) = tangent@(theta)], [I * n * t * e * g * r * a * t * e * 1, integral@(1 * differential-d@(theta)) = theta], [C * o * m * b * i * n * e * t * h * e * r * e * s * u * l * t, integral@((secant ^ 2)@(theta * d * theta)) - integral@(1 * differential-d@(theta)) = (tangent@(theta) - theta) + C], [T * h * e * r * e * f * o * r * e, integral@((tangent ^ 2)@(theta * d * theta)) = (tangent@(theta) - theta) + C]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  subtract",
+        "    int",
+        "      apply",
+        "        multiply",
+        "          identifier(𝜃)",
+        "          identifier(𝑑)",
+        "          identifier(𝜃)",
+        "    int",
+        "      multiply",
+        "        number(1)",
+        "        differential-d",
+        "          identifier(𝜃)",
+        "  add",
+        "    subtract",
+        "      tan",
+        "        identifier(𝜃)",
+        "      identifier(𝜃)",
+        "    identifier(𝐶)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex38",
+      "step_id": "STEP_87",
+      "original_expression": "Array[[I * n * t * e * g * r * a * t * e * (secant ^ 2)@(theta), integral@((secant ^ 2)@(theta * d * theta)) = tangent@(theta)], [I * n * t * e * g * r * a * t * e * 1, integral@(1 * differential-d@(theta)) = theta], [C * o * m * b * i * n * e * t * h * e * r * e * s * u * l * t, integral@((secant ^ 2)@(theta * d * theta)) - integral@(1 * differential-d@(theta)) = (tangent@(theta) - theta) + C], [T * h * e * r * e * f * o * r * e, integral@((tangent ^ 2)@(theta * d * theta)) = (tangent@(theta) - theta) + C]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  int",
+        "    apply",
+        "      multiply",
+        "        identifier(𝜃)",
+        "        identifier(𝑑)",
+        "        identifier(𝜃)",
+        "  add",
+        "    subtract",
+        "      tan",
+        "        identifier(𝜃)",
+        "      identifier(𝜃)",
+        "    identifier(𝐶)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex39",
+      "step_id": "STEP_88",
+      "original_expression": "Array[[S * t * a * r * t * w * i * t * h, x = list@(2 * sine@(theta), f * r * o * m * S * t * e * p * 3.1)], [M * u * l * t * i * p * l * y * b * o * t * h * s * i * d * e * s * b * y * (1 / 2), (1 / 2) * x = (1 / 2) * 2 * sine@(theta)], [(1 / 2) cdot 2 = 1, x / 2 = sine@(theta)], [A * p * p * l * y * (sine ^ (- 1))@(t * o * b * o * t * h * s * i * d * e * o * f * t * h * e * e * q * u * a * t * i * o * n), theta = (sine ^ (- 1))@(x / 2)]]",
+      "labels": [
+        {
+          "label_id": "MAT0006",
+          "name": "CONSTANT_SUBSTITUTION"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  identifier(𝑥)",
+        "  list",
+        "    multiply",
+        "      number(2)",
+        "      sin",
+        "        identifier(𝜃)",
+        "    multiply",
+        "      identifier(𝑓)",
+        "      identifier(𝑟)",
+        "      identifier(𝑜)",
+        "      identifier(𝑚)",
+        "      identifier(𝑆)",
+        "      identifier(𝑡)",
+        "      identifier(𝑒)",
+        "      identifier(𝑝)",
+        "      number(3.1)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex39",
+      "step_id": "STEP_89",
+      "original_expression": "Array[[S * t * a * r * t * w * i * t * h, x = list@(2 * sine@(theta), f * r * o * m * S * t * e * p * 3.1)], [M * u * l * t * i * p * l * y * b * o * t * h * s * i * d * e * s * b * y * (1 / 2), (1 / 2) * x = (1 / 2) * 2 * sine@(theta)], [(1 / 2) cdot 2 = 1, x / 2 = sine@(theta)], [A * p * p * l * y * (sine ^ (- 1))@(t * o * b * o * t * h * s * i * d * e * o * f * t * h * e * e * q * u * a * t * i * o * n), theta = (sine ^ (- 1))@(x / 2)]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  multiply",
+        "    divide",
+        "      number(1)",
+        "      number(2)",
+        "    identifier(𝑥)",
+        "  multiply",
+        "    divide",
+        "      number(1)",
+        "      number(2)",
+        "    number(2)",
+        "    sin",
+        "      identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex39",
+      "step_id": "STEP_90",
+      "original_expression": "Array[[S * t * a * r * t * w * i * t * h, x = list@(2 * sine@(theta), f * r * o * m * S * t * e * p * 3.1)], [M * u * l * t * i * p * l * y * b * o * t * h * s * i * d * e * s * b * y * (1 / 2), (1 / 2) * x = (1 / 2) * 2 * sine@(theta)], [(1 / 2) cdot 2 = 1, x / 2 = sine@(theta)], [A * p * p * l * y * (sine ^ (- 1))@(t * o * b * o * t * h * s * i * d * e * o * f * t * h * e * e * q * u * a * t * i * o * n), theta = (sine ^ (- 1))@(x / 2)]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  divide",
+        "    identifier(𝑥)",
+        "    number(2)",
+        "  sin",
+        "    identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex39",
+      "step_id": "STEP_91",
+      "original_expression": "Array[[S * t * a * r * t * w * i * t * h, x = list@(2 * sine@(theta), f * r * o * m * S * t * e * p * 3.1)], [M * u * l * t * i * p * l * y * b * o * t * h * s * i * d * e * s * b * y * (1 / 2), (1 / 2) * x = (1 / 2) * 2 * sine@(theta)], [(1 / 2) cdot 2 = 1, x / 2 = sine@(theta)], [A * p * p * l * y * (sine ^ (- 1))@(t * o * b * o * t * h * s * i * d * e * o * f * t * h * e * e * q * u * a * t * i * o * n), theta = (sine ^ (- 1))@(x / 2)]]",
+      "labels": [
+        {
+          "label_id": "MAT0006",
+          "name": "CONSTANT_SUBSTITUTION"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  identifier(𝜃)",
+        "  apply",
+        "    divide",
+        "      identifier(𝑥)",
+        "      number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex40",
+      "step_id": "STEP_92",
+      "original_expression": "Array[[U * s * e * sine@(theta) = (o * p * p * o * s * i * t * e) / (h * y * p * o * t * e * n * u * s * e), sine@(theta) = (o * p * p * o * s * i * t * e) / (h * y * p * o * t * e * n * u * s * e) = x / 2]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  multiply",
+        "    identifier(𝑈)",
+        "    identifier(𝑠)",
+        "    identifier(𝑒)",
+        "    sin",
+        "      identifier(𝜃)",
+        "  divide",
+        "    multiply",
+        "      identifier(𝑜)",
+        "      identifier(𝑝)",
+        "      identifier(𝑝)",
+        "      identifier(𝑜)",
+        "      identifier(𝑠)",
+        "      identifier(𝑖)",
+        "      identifier(𝑡)",
+        "      identifier(𝑒)",
+        "    multiply",
+        "      identifier(ℎ)",
+        "      identifier(𝑦)",
+        "      identifier(𝑝)",
+        "      identifier(𝑜)",
+        "      identifier(𝑡)",
+        "      identifier(𝑒)",
+        "      identifier(𝑛)",
+        "      identifier(𝑢)",
+        "      identifier(𝑠)",
+        "      identifier(𝑒)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex41",
+      "step_id": "STEP_93",
+      "original_expression": "Array[[F * r * o * m * sine@(theta) = x / 2, formulae@(o * p * p * o * s * i * t * e = x, h * y * p * o * t * e * n * u * s * e = 2)]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  multiply",
+        "    identifier(𝐹)",
+        "    identifier(𝑟)",
+        "    identifier(𝑜)",
+        "    identifier(𝑚)",
+        "    sin",
+        "      identifier(𝜃)",
+        "  divide",
+        "    identifier(𝑥)",
+        "    number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex42",
+      "step_id": "STEP_94",
+      "original_expression": "Array[[B * y * t * h * e * P * y * t * h * a * g * o * r * e * a * n * T * h * e * o * r * e * m, a * d * j * a * c * e * n * t = square-root@(h * y * p * o * t * e * n * u * s * e ^ 2 - o * p * p * o * s * i * t * e ^ 2)], [S * u * b * s * t * i * t * u * t * e * t * h * e * v * a * l * u * e * s, a * d * j * a * c * e * n * t = square-root@(2 ^ 2 - x ^ 2) = square-root@(4 - x ^ 2)]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  multiply",
+        "    identifier(𝑎)",
+        "    identifier(𝑑)",
+        "    identifier(𝑗)",
+        "    identifier(𝑎)",
+        "    identifier(𝑐)",
+        "    identifier(𝑒)",
+        "    identifier(𝑛)",
+        "    identifier(𝑡)",
+        "  root",
+        "    subtract",
+        "      multiply",
+        "        identifier(ℎ)",
+        "        identifier(𝑦)",
+        "        identifier(𝑝)",
+        "        identifier(𝑜)",
+        "        identifier(𝑡)",
+        "        identifier(𝑒)",
+        "        identifier(𝑛)",
+        "        identifier(𝑢)",
+        "        identifier(𝑠)",
+        "        power",
+        "          identifier(𝑒)",
+        "          number(2)",
+        "      multiply",
+        "        identifier(𝑜)",
+        "        identifier(𝑝)",
+        "        identifier(𝑝)",
+        "        identifier(𝑜)",
+        "        identifier(𝑠)",
+        "        identifier(𝑖)",
+        "        identifier(𝑡)",
+        "        power",
+        "          identifier(𝑒)",
+        "          number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex42",
+      "step_id": "STEP_95",
+      "original_expression": "Array[[B * y * t * h * e * P * y * t * h * a * g * o * r * e * a * n * T * h * e * o * r * e * m, a * d * j * a * c * e * n * t = square-root@(h * y * p * o * t * e * n * u * s * e ^ 2 - o * p * p * o * s * i * t * e ^ 2)], [S * u * b * s * t * i * t * u * t * e * t * h * e * v * a * l * u * e * s, a * d * j * a * c * e * n * t = square-root@(2 ^ 2 - x ^ 2) = square-root@(4 - x ^ 2)]]",
+      "labels": [],
+      "ast_tree": [
+        "and",
+        "  eq",
+        "    multiply",
+        "      identifier(𝑎)",
+        "      identifier(𝑑)",
+        "      identifier(𝑗)",
+        "      identifier(𝑎)",
+        "      identifier(𝑐)",
+        "      identifier(𝑒)",
+        "      identifier(𝑛)",
+        "      identifier(𝑡)",
+        "    root",
+        "      subtract",
+        "        power",
+        "          number(2)",
+        "          number(2)",
+        "        power",
+        "          identifier(𝑥)",
+        "          number(2)",
+        "  eq",
+        "    share",
+        "    root",
+        "      subtract",
+        "        number(4)",
+        "        power",
+        "          identifier(𝑥)",
+        "          number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex43",
+      "step_id": "STEP_96",
+      "original_expression": "Array[[U * s * e * tangent@(theta) = (o * p * p * o * s * i * t * e) / (a * d * j * a * c * e * n * t), tangent@(theta) = x / square-root@(4 - x ^ 2)]]",
+      "labels": [
+        {
+          "label_id": "MAT0019",
+          "name": "REFERENCE_TRIANGLE"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  tan",
+        "    identifier(𝜃)",
+        "  divide",
+        "    identifier(𝑥)",
+        "    root",
+        "      subtract",
+        "        number(4)",
+        "        power",
+        "          identifier(𝑥)",
+        "          number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex44",
+      "step_id": "STEP_97",
+      "original_expression": "Array[[F * r * o * m * S * t * e * p * 10.2, integral@((x ^ 2 / (4 - x ^ 2) ^ (3 / 2)) * differential-d@(x)) = (tangent@(theta) - theta) + C], [S * u * b * s * t * i * t * u * t * e * S * t * e * p * 11.2 * a * n * d * S * t * e * p * 11.6, integral@((x ^ 2 / (4 - x ^ 2) ^ (3 / 2)) * differential-d@(x)) = (x / square-root@(4 - x ^ 2) - (sine ^ (- 1))@(x / 2)) + C]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  int",
+        "    multiply",
+        "      divide",
+        "        power",
+        "          identifier(𝑥)",
+        "          number(2)",
+        "        power",
+        "          subtract",
+        "            number(4)",
+        "            power",
+        "              identifier(𝑥)",
+        "              number(2)",
+        "          divide",
+        "            number(3)",
+        "            number(2)",
+        "      differential-d",
+        "        identifier(𝑥)",
+        "  add",
+        "    subtract",
+        "      tan",
+        "        identifier(𝜃)",
+        "      identifier(𝜃)",
+        "    identifier(𝐶)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex44",
+      "step_id": "STEP_98",
+      "original_expression": "Array[[F * r * o * m * S * t * e * p * 10.2, integral@((x ^ 2 / (4 - x ^ 2) ^ (3 / 2)) * differential-d@(x)) = (tangent@(theta) - theta) + C], [S * u * b * s * t * i * t * u * t * e * S * t * e * p * 11.2 * a * n * d * S * t * e * p * 11.6, integral@((x ^ 2 / (4 - x ^ 2) ^ (3 / 2)) * differential-d@(x)) = (x / square-root@(4 - x ^ 2) - (sine ^ (- 1))@(x / 2)) + C]]",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  int",
+        "    multiply",
+        "      divide",
+        "        power",
+        "          identifier(𝑥)",
+        "          number(2)",
+        "        power",
+        "          subtract",
+        "            number(4)",
+        "            power",
+        "              identifier(𝑥)",
+        "              number(2)",
+        "          divide",
+        "            number(3)",
+        "            number(2)",
+        "      differential-d",
+        "        identifier(𝑥)",
+        "  add",
+        "    subtract",
+        "      divide",
+        "        identifier(𝑥)",
+        "        root",
+        "          subtract",
+        "            number(4)",
+        "            power",
+        "              identifier(𝑥)",
+        "              number(2)",
+        "      apply",
+        "        divide",
+        "          identifier(𝑥)",
+        "          number(2)",
+        "    identifier(𝐶)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex45",
+      "step_id": "STEP_99",
+      "original_expression": "T * h * e * c * o * r * r * e * c * t * o * p * t * i * o * n * i * s * b",
+      "labels": [],
+      "ast_tree": [
+        "multiply",
+        "  identifier(𝑇)",
+        "  identifier(ℎ)",
+        "  identifier(𝑒)",
+        "  identifier(𝑐)",
+        "  identifier(𝑜)",
+        "  identifier(𝑟)",
+        "  identifier(𝑟)",
+        "  identifier(𝑒)",
+        "  identifier(𝑐)",
+        "  identifier(𝑡)",
+        "  identifier(𝑜)",
+        "  identifier(𝑝)",
+        "  identifier(𝑡)",
+        "  identifier(𝑖)",
+        "  identifier(𝑜)",
+        "  identifier(𝑛)",
+        "  identifier(𝑖)",
+        "  identifier(𝑠)",
+        "  identifier(𝑏)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex46",
+      "step_id": "STEP_100",
+      "original_expression": "(d / (d * x)) * (x ^ 3 / 3) = x ^ 2",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  multiply",
+        "    divide",
+        "      identifier(𝑑)",
+        "      multiply",
+        "        identifier(𝑑)",
+        "        identifier(𝑥)",
+        "    divide",
+        "      power",
+        "        identifier(𝑥)",
+        "        number(3)",
+        "      number(3)",
+        "  power",
+        "    identifier(𝑥)",
+        "    number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex47",
+      "step_id": "STEP_101",
+      "original_expression": "x ^ 2 / (4 - x ^ 2) ^ (3 / 2)",
+      "labels": [],
+      "ast_tree": [
+        "divide",
+        "  power",
+        "    identifier(𝑥)",
+        "    number(2)",
+        "  power",
+        "    subtract",
+        "      number(4)",
+        "      power",
+        "        identifier(𝑥)",
+        "        number(2)",
+        "    divide",
+        "      number(3)",
+        "      number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex48",
+      "step_id": "STEP_102",
+      "original_expression": "x ^ 2 / (4 - x ^ 2) ^ (3 / 2)",
+      "labels": [],
+      "ast_tree": [
+        "divide",
+        "  power",
+        "    identifier(𝑥)",
+        "    number(2)",
+        "  power",
+        "    subtract",
+        "      number(4)",
+        "      power",
+        "        identifier(𝑥)",
+        "        number(2)",
+        "    divide",
+        "      number(3)",
+        "      number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex49",
+      "step_id": "STEP_103",
+      "original_expression": "3 * x + 7",
+      "labels": [],
+      "ast_tree": [
+        "add",
+        "  multiply",
+        "    number(3)",
+        "    identifier(𝑥)",
+        "  number(7)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex50",
+      "step_id": "STEP_104",
+      "original_expression": "3 * x + 7",
+      "labels": [],
+      "ast_tree": [
+        "add",
+        "  multiply",
+        "    number(3)",
+        "    identifier(𝑥)",
+        "  number(7)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex51",
+      "step_id": "STEP_105",
+      "original_expression": "(a * b) ^ n = a ^ n * b ^ n",
+      "labels": [
+        {
+          "label_id": "MAT0002",
+          "name": "POWER_OF_A_PRODUCT"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  power",
+        "    multiply",
+        "      identifier(𝑎)",
+        "      identifier(𝑏)",
+        "    identifier(𝑛)",
+        "  multiply",
+        "    power",
+        "      identifier(𝑎)",
+        "      identifier(𝑛)",
+        "    power",
+        "      identifier(𝑏)",
+        "      identifier(𝑛)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex52",
+      "step_id": "STEP_106",
+      "original_expression": "(3 * x) ^ 2 = 3 ^ 2 * x ^ 2 = 9 * x ^ 2",
+      "labels": [],
+      "ast_tree": [
+        "and",
+        "  eq",
+        "    power",
+        "      multiply",
+        "        number(3)",
+        "        identifier(𝑥)",
+        "      number(2)",
+        "    multiply",
+        "      power",
+        "        number(3)",
+        "        number(2)",
+        "      power",
+        "        identifier(𝑥)",
+        "        number(2)",
+        "  eq",
+        "    share",
+        "    multiply",
+        "      number(9)",
+        "      power",
+        "        identifier(𝑥)",
+        "        number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex53",
+      "step_id": "STEP_107",
+      "original_expression": "square-root@(4 - x ^ 2) = square-root@(2 ^ 2 - x ^ 2)",
+      "labels": [
+        {
+          "label_id": "MAT0005",
+          "name": "RADICAL_REWRITE"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  root",
+        "    subtract",
+        "      number(4)",
+        "      power",
+        "        identifier(𝑥)",
+        "        number(2)",
+        "  root",
+        "    subtract",
+        "      power",
+        "        number(2)",
+        "        number(2)",
+        "      power",
+        "        identifier(𝑥)",
+        "        number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex54",
+      "step_id": "STEP_108",
+      "original_expression": "square-root@(a ^ 2 - x ^ 2) colon (x = list@(a * sine@(theta), square-root@(a ^ 2 + x ^ 2))) colon (x = list@(a * tangent@(theta), square-root@(x ^ 2 - a ^ 2))) colon (x = a * secant@(theta))",
+      "labels": [
+        {
+          "label_id": "MAT0019",
+          "name": "REFERENCE_TRIANGLE"
+        }
+      ],
+      "ast_tree": [
+        "and",
+        "  ci",
+        "    root",
+        "      subtract",
+        "        power",
+        "          identifier(𝑎)",
+        "          number(2)",
+        "        power",
+        "          identifier(𝑥)",
+        "          number(2)",
+        "    eq",
+        "      identifier(𝑥)",
+        "      list",
+        "        multiply",
+        "          identifier(𝑎)",
+        "          sin",
+        "            identifier(𝜃)",
+        "        root",
+        "          add",
+        "            power",
+        "              identifier(𝑎)",
+        "              number(2)",
+        "            power",
+        "              identifier(𝑥)",
+        "              number(2)",
+        "  ci",
+        "    share",
+        "    eq",
+        "      identifier(𝑥)",
+        "      list",
+        "        multiply",
+        "          identifier(𝑎)",
+        "          tan",
+        "            identifier(𝜃)",
+        "        root",
+        "          subtract",
+        "            power",
+        "              identifier(𝑥)",
+        "              number(2)",
+        "            power",
+        "              identifier(𝑎)",
+        "              number(2)",
+        "  ci",
+        "    share",
+        "    eq",
+        "      identifier(𝑥)",
+        "      multiply",
+        "        identifier(𝑎)",
+        "        sec",
+        "          identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex55",
+      "step_id": "STEP_109",
+      "original_expression": "a ^ (m / n) = nth-root@(n, a ^ m) = a ^ (1 / n) ^ m",
+      "labels": [],
+      "ast_tree": [
+        "and",
+        "  eq",
+        "    power",
+        "      identifier(𝑎)",
+        "      divide",
+        "        identifier(𝑚)",
+        "        identifier(𝑛)",
+        "    root",
+        "      degree",
+        "        identifier(𝑛)",
+        "      power",
+        "        identifier(𝑎)",
+        "        identifier(𝑚)",
+        "  eq",
+        "    share",
+        "    power",
+        "      power",
+        "        identifier(𝑎)",
+        "        divide",
+        "          number(1)",
+        "          identifier(𝑛)",
+        "      identifier(𝑚)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex56",
+      "step_id": "STEP_110",
+      "original_expression": "(4 - x ^ 2) ^ (3 / 2) = (4 - x ^ 2) ^ (1 / 2) ^ 3 = (square-root@(4 - x ^ 2)) ^ 3",
+      "labels": [],
+      "ast_tree": [
+        "and",
+        "  eq",
+        "    power",
+        "      subtract",
+        "        number(4)",
+        "        power",
+        "          identifier(𝑥)",
+        "          number(2)",
+        "      divide",
+        "        number(3)",
+        "        number(2)",
+        "    power",
+        "      power",
+        "        subtract",
+        "          number(4)",
+        "          power",
+        "            identifier(𝑥)",
+        "            number(2)",
+        "        divide",
+        "          number(1)",
+        "          number(2)",
+        "      number(3)",
+        "  eq",
+        "    share",
+        "    power",
+        "      root",
+        "        subtract",
+        "          number(4)",
+        "          power",
+        "            identifier(𝑥)",
+        "            number(2)",
+        "      number(3)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex57",
+      "step_id": "STEP_111",
+      "original_expression": "formulae@((sine@(theta)) ^ 2 = (sine ^ 2)@(theta), formulae@((cosine@(theta)) ^ 2 = (cosine ^ 2)@(theta), (tangent@(theta)) ^ 2 = (tangent ^ 2)@(theta)))",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  power",
+        "    sin",
+        "      identifier(𝜃)",
+        "    number(2)",
+        "  apply",
+        "    identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex57",
+      "step_id": "STEP_112",
+      "original_expression": "formulae@((sine@(theta)) ^ 2 = (sine ^ 2)@(theta), formulae@((cosine@(theta)) ^ 2 = (cosine ^ 2)@(theta), (tangent@(theta)) ^ 2 = (tangent ^ 2)@(theta)))",
+      "labels": [],
+      "ast_tree": [
+        "sequence",
+        "  eq",
+        "    power",
+        "      cos",
+        "        identifier(𝜃)",
+        "      number(2)",
+        "    apply",
+        "      identifier(𝜃)",
+        "  eq",
+        "    power",
+        "      tan",
+        "        identifier(𝜃)",
+        "      number(2)",
+        "    apply",
+        "      identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex58",
+      "step_id": "STEP_113",
+      "original_expression": "formulae@((sine ^ 2)@(theta) + (cosine ^ 2)@(theta) = list@(1, Longleftrightarrow), 1 - (sine ^ 2)@(theta) = (cosine ^ 2)@(theta))",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  add",
+        "    apply",
+        "      identifier(𝜃)",
+        "    apply",
+        "      identifier(𝜃)",
+        "  list",
+        "    number(1)",
+        "    identifier(⟺)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex58",
+      "step_id": "STEP_114",
+      "original_expression": "formulae@((sine ^ 2)@(theta) + (cosine ^ 2)@(theta) = list@(1, Longleftrightarrow), 1 - (sine ^ 2)@(theta) = (cosine ^ 2)@(theta))",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  subtract",
+        "    number(1)",
+        "    apply",
+        "      identifier(𝜃)",
+        "  apply",
+        "    identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex59",
+      "step_id": "STEP_115",
+      "original_expression": "4 - 4 * (sine ^ 2)@(theta) = 4 * (1 - (sine ^ 2)@(theta)) = 4 * (cosine ^ 2)@(theta)",
+      "labels": [],
+      "ast_tree": [
+        "and",
+        "  eq",
+        "    subtract",
+        "      number(4)",
+        "      multiply",
+        "        number(4)",
+        "        apply",
+        "          identifier(𝜃)",
+        "    multiply",
+        "      number(4)",
+        "      subtract",
+        "        number(1)",
+        "        apply",
+        "          identifier(𝜃)",
+        "  eq",
+        "    share",
+        "    multiply",
+        "      number(4)",
+        "      apply",
+        "        identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex60",
+      "step_id": "STEP_116",
+      "original_expression": "a ^ 2 + b ^ 2 = c ^ 2",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  add",
+        "    power",
+        "      identifier(𝑎)",
+        "      number(2)",
+        "    power",
+        "      identifier(𝑏)",
+        "      number(2)",
+        "  power",
+        "    identifier(𝑐)",
+        "    number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex61",
+      "step_id": "STEP_117",
+      "original_expression": "a * d * j * a * c * e * n * t ^ 2 = 2 ^ 2 - x ^ 2 = 4 - x ^ 2",
+      "labels": [],
+      "ast_tree": [
+        "and",
+        "  eq",
+        "    multiply",
+        "      identifier(𝑎)",
+        "      identifier(𝑑)",
+        "      identifier(𝑗)",
+        "      identifier(𝑎)",
+        "      identifier(𝑐)",
+        "      identifier(𝑒)",
+        "      identifier(𝑛)",
+        "      power",
+        "        identifier(𝑡)",
+        "        number(2)",
+        "    subtract",
+        "      power",
+        "        number(2)",
+        "        number(2)",
+        "      power",
+        "        identifier(𝑥)",
+        "        number(2)",
+        "  eq",
+        "    share",
+        "    subtract",
+        "      number(4)",
+        "      power",
+        "        identifier(𝑥)",
+        "        number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex62",
+      "step_id": "STEP_118",
+      "original_expression": "y ^ 2 = list@(x, Longrightarrow, y * i * s * a * s * q * u * a * r * e * r * o * o * t * o * f * x)",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  power",
+        "    identifier(𝑦)",
+        "    number(2)",
+        "  list",
+        "    identifier(𝑥)",
+        "    identifier(⟹)",
+        "    multiply",
+        "      identifier(𝑦)",
+        "      identifier(𝑖)",
+        "      identifier(𝑠)",
+        "      identifier(𝑎)",
+        "      identifier(𝑠)",
+        "      identifier(𝑞)",
+        "      identifier(𝑢)",
+        "      identifier(𝑎)",
+        "      identifier(𝑟)",
+        "      identifier(𝑒)",
+        "      identifier(𝑟)",
+        "      identifier(𝑜)",
+        "      identifier(𝑜)",
+        "      identifier(𝑡)",
+        "      identifier(𝑜)",
+        "      identifier(𝑓)",
+        "      identifier(𝑥)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex63",
+      "step_id": "STEP_119",
+      "original_expression": "formulae@(square-root@(x) = list@(y, Longleftrightarrow), y ^ 2 = x * a * n * d * y >= 0)",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  root",
+        "    identifier(𝑥)",
+        "  list",
+        "    identifier(𝑦)",
+        "    identifier(⟺)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex63",
+      "step_id": "STEP_120",
+      "original_expression": "formulae@(square-root@(x) = list@(y, Longleftrightarrow), y ^ 2 = x * a * n * d * y >= 0)",
+      "labels": [],
+      "ast_tree": [
+        "and",
+        "  eq",
+        "    power",
+        "      identifier(𝑦)",
+        "      number(2)",
+        "    multiply",
+        "      identifier(𝑥)",
+        "      identifier(𝑎)",
+        "      identifier(𝑛)",
+        "      identifier(𝑑)",
+        "      identifier(𝑦)",
+        "  geq",
+        "    share",
+        "    number(0)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex64",
+      "step_id": "STEP_121",
+      "original_expression": "square-root@(9) = 3",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  root",
+        "    number(9)",
+        "  number(3)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex65",
+      "step_id": "STEP_122",
+      "original_expression": "3 ^ 2 = 9",
+      "labels": [
+        {
+          "label_id": "MAT0006",
+          "name": "CONSTANT_SUBSTITUTION"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  power",
+        "    number(3)",
+        "    number(2)",
+        "  number(9)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex66",
+      "step_id": "STEP_123",
+      "original_expression": "square-root@(x ^ 2) = absolute-value@(x)",
+      "labels": [
+        {
+          "label_id": "MAT0009",
+          "name": "SQRT_TO_ABS"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  root",
+        "    power",
+        "      identifier(𝑥)",
+        "      number(2)",
+        "  abs",
+        "    identifier(𝑥)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex67",
+      "step_id": "STEP_124",
+      "original_expression": "square-root@(a) * square-root@(b) = square-root@(a * b)",
+      "labels": [
+        {
+          "label_id": "MAT0005",
+          "name": "RADICAL_REWRITE"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  multiply",
+        "    root",
+        "      identifier(𝑎)",
+        "    root",
+        "      identifier(𝑏)",
+        "  root",
+        "    multiply",
+        "      identifier(𝑎)",
+        "      identifier(𝑏)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex68",
+      "step_id": "STEP_125",
+      "original_expression": "square-root@(a / b) = square-root@(a) / square-root@(b)",
+      "labels": [
+        {
+          "label_id": "MAT0005",
+          "name": "RADICAL_REWRITE"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  root",
+        "    divide",
+        "      identifier(𝑎)",
+        "      identifier(𝑏)",
+        "  divide",
+        "    root",
+        "      identifier(𝑎)",
+        "    root",
+        "      identifier(𝑏)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex69",
+      "step_id": "STEP_126",
+      "original_expression": "formulae@((square-root@(a)) ^ 2 = list@(a, a * n * d), a ^ (1 / 2) = square-root@(a))",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  power",
+        "    root",
+        "      identifier(𝑎)",
+        "    number(2)",
+        "  list",
+        "    identifier(𝑎)",
+        "    multiply",
+        "      identifier(𝑎)",
+        "      identifier(𝑛)",
+        "      identifier(𝑑)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex69",
+      "step_id": "STEP_127",
+      "original_expression": "formulae@((square-root@(a)) ^ 2 = list@(a, a * n * d), a ^ (1 / 2) = square-root@(a))",
+      "labels": [
+        {
+          "label_id": "MAT0004",
+          "name": "FRACTIONAL_EXPONENT_TO_ROOT"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  power",
+        "    identifier(𝑎)",
+        "    divide",
+        "      number(1)",
+        "      number(2)",
+        "  root",
+        "    identifier(𝑎)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex70",
+      "step_id": "STEP_128",
+      "original_expression": "(d / (d * theta)) * c * f * theta = c * f ^ prime * theta",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  multiply",
+        "    divide",
+        "      identifier(𝑑)",
+        "      multiply",
+        "        identifier(𝑑)",
+        "        identifier(𝜃)",
+        "    multiply",
+        "      identifier(𝑐)",
+        "      identifier(𝑓)",
+        "      identifier(𝜃)",
+        "  multiply",
+        "    identifier(𝑐)",
+        "    power",
+        "      identifier(𝑓)",
+        "      identifier(′)",
+        "    identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex71",
+      "step_id": "STEP_129",
+      "original_expression": "(d / (d * theta)) * 2 * sine@(theta) = 2 * cosine@(theta)",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  multiply",
+        "    divide",
+        "      identifier(𝑑)",
+        "      multiply",
+        "        identifier(𝑑)",
+        "        identifier(𝜃)",
+        "    multiply",
+        "      number(2)",
+        "      sin",
+        "        identifier(𝜃)",
+        "  multiply",
+        "    number(2)",
+        "    cos",
+        "      identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex72",
+      "step_id": "STEP_130",
+      "original_expression": "integral@((f * x + g * x) * differential-d@(x)) = integral@(f * x * differential-d@(x)) + integral@(g * x * differential-d@(x))",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  int",
+        "    multiply",
+        "      add",
+        "        multiply",
+        "          identifier(𝑓)",
+        "          identifier(𝑥)",
+        "        multiply",
+        "          identifier(𝑔)",
+        "          identifier(𝑥)",
+        "      differential-d",
+        "        identifier(𝑥)",
+        "  add",
+        "    int",
+        "      multiply",
+        "        identifier(𝑓)",
+        "        identifier(𝑥)",
+        "        differential-d",
+        "          identifier(𝑥)",
+        "    int",
+        "      multiply",
+        "        identifier(𝑔)",
+        "        identifier(𝑥)",
+        "        differential-d",
+        "          identifier(𝑥)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex73",
+      "step_id": "STEP_131",
+      "original_expression": "integral@((f * x - g * x) * differential-d@(x)) = integral@(f * x * differential-d@(x)) - integral@(g * x * differential-d@(x))",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  int",
+        "    multiply",
+        "      subtract",
+        "        multiply",
+        "          identifier(𝑓)",
+        "          identifier(𝑥)",
+        "        multiply",
+        "          identifier(𝑔)",
+        "          identifier(𝑥)",
+        "      differential-d",
+        "        identifier(𝑥)",
+        "  subtract",
+        "    int",
+        "      multiply",
+        "        identifier(𝑓)",
+        "        identifier(𝑥)",
+        "        differential-d",
+        "          identifier(𝑥)",
+        "    int",
+        "      multiply",
+        "        identifier(𝑔)",
+        "        identifier(𝑥)",
+        "        differential-d",
+        "          identifier(𝑥)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex74",
+      "step_id": "STEP_132",
+      "original_expression": "integral@(((secant ^ 2)@(theta) - 1) * differential-d@(theta)) = integral@((secant ^ 2)@(theta * d * theta)) - integral@(1 * differential-d@(theta))",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  int",
+        "    multiply",
+        "      subtract",
+        "        apply",
+        "          identifier(𝜃)",
+        "        number(1)",
+        "      differential-d",
+        "        identifier(𝜃)",
+        "  subtract",
+        "    int",
+        "      apply",
+        "        multiply",
+        "          identifier(𝜃)",
+        "          identifier(𝑑)",
+        "          identifier(𝜃)",
+        "    int",
+        "      multiply",
+        "        number(1)",
+        "        differential-d",
+        "          identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex75",
+      "step_id": "STEP_133",
+      "original_expression": "formulae@(absolute-value@(3) = 3, absolute-value@(- 3) = 3)",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  abs",
+        "    number(3)",
+        "  number(3)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex75",
+      "step_id": "STEP_134",
+      "original_expression": "formulae@(absolute-value@(3) = 3, absolute-value@(- 3) = 3)",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  abs",
+        "    subtract",
+        "      number(3)",
+        "  number(3)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex76",
+      "step_id": "STEP_135",
+      "original_expression": "square-root@(u ^ 2) = absolute-value@(u)",
+      "labels": [
+        {
+          "label_id": "MAT0009",
+          "name": "SQRT_TO_ABS"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  root",
+        "    power",
+        "      identifier(𝑢)",
+        "      number(2)",
+        "  abs",
+        "    identifier(𝑢)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex77",
+      "step_id": "STEP_136",
+      "original_expression": "absolute-value@(cosine@(theta)) = cosine@(theta)",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  abs",
+        "    cos",
+        "      identifier(𝜃)",
+        "  cos",
+        "    identifier(𝜃)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex78",
+      "step_id": "STEP_137",
+      "original_expression": "formulae@(sine@(theta) = (o * p * p * o * s * i * t * e) / (h * y * p * o * t * e * n * u * s * e), formulae@(cosine@(theta) = (a * d * j * a * c * e * n * t) / (h * y * p * o * t * e * n * u * s * e), tangent@(theta) = (o * p * p * o * s * i * t * e) / (a * d * j * a * c * e * n * t)))",
+      "labels": [],
+      "ast_tree": [
+        "eq",
+        "  sin",
+        "    identifier(𝜃)",
+        "  divide",
+        "    multiply",
+        "      identifier(𝑜)",
+        "      identifier(𝑝)",
+        "      identifier(𝑝)",
+        "      identifier(𝑜)",
+        "      identifier(𝑠)",
+        "      identifier(𝑖)",
+        "      identifier(𝑡)",
+        "      identifier(𝑒)",
+        "    multiply",
+        "      identifier(ℎ)",
+        "      identifier(𝑦)",
+        "      identifier(𝑝)",
+        "      identifier(𝑜)",
+        "      identifier(𝑡)",
+        "      identifier(𝑒)",
+        "      identifier(𝑛)",
+        "      identifier(𝑢)",
+        "      identifier(𝑠)",
+        "      identifier(𝑒)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex78",
+      "step_id": "STEP_138",
+      "original_expression": "formulae@(sine@(theta) = (o * p * p * o * s * i * t * e) / (h * y * p * o * t * e * n * u * s * e), formulae@(cosine@(theta) = (a * d * j * a * c * e * n * t) / (h * y * p * o * t * e * n * u * s * e), tangent@(theta) = (o * p * p * o * s * i * t * e) / (a * d * j * a * c * e * n * t)))",
+      "labels": [],
+      "ast_tree": [
+        "sequence",
+        "  eq",
+        "    cos",
+        "      identifier(𝜃)",
+        "    divide",
+        "      multiply",
+        "        identifier(𝑎)",
+        "        identifier(𝑑)",
+        "        identifier(𝑗)",
+        "        identifier(𝑎)",
+        "        identifier(𝑐)",
+        "        identifier(𝑒)",
+        "        identifier(𝑛)",
+        "        identifier(𝑡)",
+        "      multiply",
+        "        identifier(ℎ)",
+        "        identifier(𝑦)",
+        "        identifier(𝑝)",
+        "        identifier(𝑜)",
+        "        identifier(𝑡)",
+        "        identifier(𝑒)",
+        "        identifier(𝑛)",
+        "        identifier(𝑢)",
+        "        identifier(𝑠)",
+        "        identifier(𝑒)",
+        "  eq",
+        "    tan",
+        "      identifier(𝜃)",
+        "    divide",
+        "      multiply",
+        "        identifier(𝑜)",
+        "        identifier(𝑝)",
+        "        identifier(𝑝)",
+        "        identifier(𝑜)",
+        "        identifier(𝑠)",
+        "        identifier(𝑖)",
+        "        identifier(𝑡)",
+        "        identifier(𝑒)",
+        "      multiply",
+        "        identifier(𝑎)",
+        "        identifier(𝑑)",
+        "        identifier(𝑗)",
+        "        identifier(𝑎)",
+        "        identifier(𝑐)",
+        "        identifier(𝑒)",
+        "        identifier(𝑛)",
+        "        identifier(𝑡)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex79",
+      "step_id": "STEP_139",
+      "original_expression": "square-root@(2 ^ 2 - x ^ 2) = square-root@(4 - x ^ 2)",
+      "labels": [
+        {
+          "label_id": "MAT0005",
+          "name": "RADICAL_REWRITE"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  root",
+        "    subtract",
+        "      power",
+        "        number(2)",
+        "        number(2)",
+        "      power",
+        "        identifier(𝑥)",
+        "        number(2)",
+        "  root",
+        "    subtract",
+        "      number(4)",
+        "      power",
+        "        identifier(𝑥)",
+        "        number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex80",
+      "step_id": "STEP_140",
+      "original_expression": "tangent@(theta) = x / square-root@(4 - x ^ 2)",
+      "labels": [
+        {
+          "label_id": "MAT0019",
+          "name": "REFERENCE_TRIANGLE"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  tan",
+        "    identifier(𝜃)",
+        "  divide",
+        "    identifier(𝑥)",
+        "    root",
+        "      subtract",
+        "        number(4)",
+        "        power",
+        "          identifier(𝑥)",
+        "          number(2)"
+      ]
+    },
+    {
+      "equation_id": "S0.Ex81",
+      "step_id": "STEP_141",
+      "original_expression": "theta = (sine ^ (- 1))@(x / 2)",
+      "labels": [
+        {
+          "label_id": "MAT0006",
+          "name": "CONSTANT_SUBSTITUTION"
+        }
+      ],
+      "ast_tree": [
+        "eq",
+        "  identifier(𝜃)",
+        "  apply",
+        "    divide",
+        "      identifier(𝑥)",
+        "      number(2)"
+      ]
+    }
+  ]
+}
